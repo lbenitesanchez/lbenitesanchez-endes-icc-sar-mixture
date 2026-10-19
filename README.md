@@ -2,14 +2,16 @@
 
 Code for estimating district childhood anaemia and stunting in Peru with a fixed **75% ICC beta + 25% full-graph SAR** distributional mixture. The current workflow includes the same-model REML and parametric-bootstrap corrections used in the revised analysis.
 
-**Start with the [English table-and-figure guide](simplified/README.md).** It provides one entry point for each current result and reuses the original statistical modules.
+**Start with the [English table-and-figure guide](simplified/README.md).** It provides one entry point for each supported result and reuses the original statistical modules.
+
+The simplified interface covers **20 outputs: article Tables 1–5 and Figures 1–3; supplement Tables S1–S9 and S23, and Figures S1–S2**. It regenerates these outputs from corrected derived inputs. **A fresh clone alone cannot generate the results:** the 35 required external CSVs are excluded from GitHub. See [input access and preparation](simplified/INPUTS.md#obtaining-the-input-bundle). Historical supplement Tables S10–S22 and Figures S3–S6 use the [original workflow](REPRODUCING.md#historical-supplement-results).
 
 ## Contents
 
 | What you want to do | Start here |
 | --- | --- |
 | Regenerate a particular table or figure | [Table-and-figure guide](simplified/README.md#tables-and-figures) |
-| Regenerate all current outputs | [Run all entry point](simplified/run_all.py) |
+| Regenerate all 20 supported outputs | [Execution instructions](simplified/README.md#run-one-result-a-group-or-all-20) |
 | Understand the proposed mixture | [Fixed 75/25 mixture interface](simplified/model/mixture_75_25.py) and the original [`mixture_prediction`](src/estudio_publicacion/sikov_2026-10-10/scripts/improve_candidates.py) |
 | Prepare the external derived inputs | [Simplified input contract](simplified/INPUTS.md) |
 | Re-estimate the complete analysis from source data | [Full reproduction instructions](REPRODUCING.md) and [data requirements](reproduction/DATA_INPUTS.md) |
@@ -17,14 +19,20 @@ Code for estimating district childhood anaemia and stunting in Peru with a fixed
 
 ## Quick start
 
-Run these commands from the repository root:
+The commands below use a macOS/Linux shell and **Python 3.12**. The simplified workflow was validated with Python **3.12.14** and the versions pinned in `simplified/requirements.txt`. It requires Python dependencies only; R and CmdStan belong to the full fitting workflow.
+
+Download the repository and prepare the environment once:
 
 ```sh
-python3 -m venv .venv
+git clone https://github.com/lbenitesanchez/lbenitesanchez-endes-icc-sar-mixture.git endes-icc-sar-mixture
+cd endes-icc-sar-mixture
+python3.12 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r simplified/requirements.txt
 python tools/check_code_release.py
 ```
+
+If you already cloned the repository, start with `cd` into your checkout. Run all subsequent commands from that repository root with the environment activated.
 
 The simplified workflow requires an external input folder containing the registered derived CSVs and reference tables. Their contents are not distributed in this repository. See [INPUTS.md](simplified/INPUTS.md) before running the analysis.
 
@@ -32,31 +40,37 @@ The simplified workflow requires an external input folder containing the registe
 export IAOS_SIMPLE_DATA_ROOT="/external/path/simplified_inputs"
 export IAOS_SIMPLE_OUTPUT_ROOT="/external/path/simplified_outputs"
 python simplified/verify_inputs.py
-python simplified/run_all.py
 ```
 
 Replace both paths with your own folders. Keep the input and output folders separate and outside the checkout. You can also supply `--data-root` and `--output-root` directly. Use `--help` to inspect an entry point without providing data.
 
-For **Figure 1** and **Table 3**, run:
+After verification, choose the result you need. For **Figure 1** and **Table 3**, run:
 
 ```sh
 python simplified/article/figure_1/generate.py
 python simplified/article/table_3/generate.py
 ```
 
-These commands regenerate outputs from certified derived inputs. The full fitting workflow, including NUTS, REML and bootstrap, is described in [REPRODUCING.md](REPRODUCING.md).
+These create `article/figure_1/output/Figure_1.png` (also SVG) and `article/table_3/output/Table_3.csv` below `IAOS_SIMPLE_OUTPUT_ROOT`. They can be run independently; earlier table numbers are not prerequisites. All 35 inputs are required even for one result.
 
-## Browse the current outputs
+To generate all 20 supported outputs instead, run `python simplified/run_all.py`. Inspect the per-result `verification.json` reports and the output root's `EXECUTION_VERIFICATION.json`. The latter describes the latest invocation, rather than accumulating separate runs. These commands do not rerun NUTS, REML or bootstrap; full fitting is described in [REPRODUCING.md](REPRODUCING.md).
 
-| Article tables | Article figures |
-| --- | --- |
-| [Table 1: aggregate performance](simplified/article/table_1/generate.py) | [Figure 1: RMSE and coverage](simplified/article/figure_1/generate.py) |
-| [Table 2: primary Holm3 contrasts](simplified/article/table_2/generate.py) | [Figure 2: paired differences from ICC](simplified/article/figure_2/generate.py) |
-| [Table 3: incremental comparison with ICC](simplified/article/table_3/generate.py) | [Figure 3: sparse57 sensitivity](simplified/article/figure_3/generate.py) |
-| [Table 4: sparse57 sensitivity](simplified/article/table_4/generate.py) | |
-| [Table 5: secondary Holm12 contrasts](simplified/article/table_5/generate.py) | |
+## Find the code for each article result
 
-The [supplement entry points](simplified/README.md#tables-and-figures) cover Tables S1–S9 and S23, and Figures S1–S2. Historical supporting experiments remain with the original analysis sources. Earlier Spanish entry-point paths are retained for compatibility; the English paths above are the recommended starting points.
+After the setup and input verification above, copy the command for the result you need:
+
+| Article result | Command from the repository root | Output below `IAOS_SIMPLE_OUTPUT_ROOT` |
+| --- | --- | --- |
+| [Table 1: aggregate performance](simplified/article/table_1/generate.py) | `python simplified/article/table_1/generate.py` | `article/table_1/output/Table_1.csv` |
+| [Table 2: primary Holm3 contrasts](simplified/article/table_2/generate.py) | `python simplified/article/table_2/generate.py` | `article/table_2/output/Table_2.csv` |
+| [Table 3: incremental comparison with ICC](simplified/article/table_3/generate.py) | `python simplified/article/table_3/generate.py` | `article/table_3/output/Table_3.csv` |
+| [Table 4: sparse57 sensitivity](simplified/article/table_4/generate.py) | `python simplified/article/table_4/generate.py` | `article/table_4/output/Table_4.csv` |
+| [Table 5: secondary Holm12 contrasts](simplified/article/table_5/generate.py) | `python simplified/article/table_5/generate.py` | `article/table_5/output/Table_5.csv` |
+| [Figure 1: RMSE and coverage](simplified/article/figure_1/generate.py) | `python simplified/article/figure_1/generate.py` | `article/figure_1/output/Figure_1.png` + `.svg` |
+| [Figure 2: paired differences from ICC](simplified/article/figure_2/generate.py) | `python simplified/article/figure_2/generate.py` | `article/figure_2/output/Figure_2.png` + `.svg` |
+| [Figure 3: sparse57 sensitivity](simplified/article/figure_3/generate.py) | `python simplified/article/figure_3/generate.py` | `article/figure_3/output/Figure_3.png` + `.svg` |
+
+The [complete command table](simplified/README.md#tables-and-figures) also lists all 12 supported supplement outputs. The [historical supplement map](REPRODUCING.md#historical-supplement-results) identifies the remaining original sources. Earlier Spanish entry-point paths are retained for compatibility; use the English paths above for new work.
 
 ## Original analysis and full re-estimation
 

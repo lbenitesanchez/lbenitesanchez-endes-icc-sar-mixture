@@ -55,3 +55,28 @@ Run final `audit_corrected_scores_v3.py` against the completed private predictio
 ## 4 Code-only compatibility
 
 The model/scoring mathematics and retained table functions are unchanged. Paths, private-reference routing, editorial omissions and numerical-only formatting extraction are explicit adaptations in `provenance/code_only_sources.json` and the associated parity receipts. Unknown source changes are rejected. The repository contains no saved manuscript, supplement, cover letter, generated result matrix, data records or chains.
+
+## Historical supplement results
+
+The simplified interface covers article Tables 1–5/Figures 1–3 and supplement Tables S1–S9/S23/Figures S1–S2. The **13 remaining tables and 4 figures** belong to historical supporting analyses. They have no `simplified/.../generate.py` entry point and are excluded from `simplified/run_all.py`.
+
+Use the following original sources to locate their computations. These are pipeline components requiring a prepared external study and reference tree, rather than standalone table generators. Follow the legacy stages and argument contracts in [reproduction/run_all.py](reproduction/run_all.py), [reproduction/legacy_runner.py](reproduction/legacy_runner.py) and [external input requirements](reproduction/DATA_INPUTS.md). Historical CUT8 and benchmark results retain their original roles; they do not add validation populations to the current mixture analysis.
+
+| Current supplement number | Original computation source |
+| --- | --- |
+| Tables S10, S13 | [sim_design_diagnostics.py](src/estudio_publicacion/fase2_2026-10-07/scripts/sim_design_diagnostics.py) |
+| Tables S11, S14, S15 | [validacion_score_external.py](src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_score_external.py) |
+| Tables S12, S18 | [phase2_application_summary.py](src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_application_summary.py) |
+| Tables S16, S17 | [diseno_fit_cut.py](src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_fit_cut.py) and the CUT8/CUT16 comparison stage |
+| Tables S19–S21 | [benchmark_finalize.py](src/estudio_publicacion/scripts/competitors/benchmark_finalize.py) |
+| Table S22 | [benchmark_spatial_evaluate.py](src/estudio_publicacion/scripts/competitors/benchmark_spatial_evaluate.py) |
+| Figures S3–S6 | [phase2_figures.py](src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_figures.py), routed by [legacy_figures.py](reproduction/legacy_figures.py) |
+
+The numerical table formatting is in `supplement_tables` in [reproduction/article_coverage.py](reproduction/article_coverage.py). The legacy figure wrapper uses older labels; use the figure stems to match the current numbering:
+
+| Current figure | Original figure stem | Legacy wrapper label |
+| --- | --- | --- |
+| Figure S3 | `design_diagnostics` | `Figure_A1` |
+| Figure S4 | `external_contrasts` | `Figure_A2` |
+| Figure S5 | `application2025_ICC_capitals` | `Figure_A3` |
+| Figure S6 | `application2025_capitals` | `Figure_S1` |

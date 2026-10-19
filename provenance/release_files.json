@@ -1,6 +1,6 @@
 {
   "format": "endes-code-only-release-files-v1",
-  "created_utc": "2026-10-19T11:45:16.660301+00:00",
+  "created_utc": "2026-10-19T11:56:16.159285+00:00",
   "excluded_from_self_index": [
     "provenance/release_files.json",
     "provenance/publication_audit.json"
@@ -9,8 +9,8 @@
     ".gitattributes": "ba3af655a67e5fcaaa5d9eaa1c3c8794ffe02355421c2222278c641c81e491ae",
     ".gitignore": "6e282b1aaae70c57d505f7670925521f3e368e1208d1106bdba6a4f506e7c9e5",
     "CITATION.cff": "76c5f230f75bd5711d07d5860e20a85311c75cfa94566cb662fde9d053529ceb",
-    "README.md": "73d3c2b0dff922632e2cf42b832e37ff50b2f1d55459a1cf98c70e09da806681",
-    "REPRODUCING.md": "6ecf8fe3fd17941dd4a8186052ac81ec5786f0129abfb7f6cc5f16ee9255ec8b",
+    "README.md": "11608e3cfdf7cfeb910fe06dfe0b710807e06ddf4d7dcd0e41ac02f0889e5c6a",
+    "REPRODUCING.md": "04f46fd3b003c204bdfaa4b114250a773646c4e6d8e6b99d39ec2cee9e678842",
     "expected/private_csv_checksums.json": "5817e79f82897e854e52837ff54b787fdf5fb8581190d2b2b17e942c2af388b5",
     "expected/raw_2025_checksums.json": "60b385c8d8a02820c096f9ed745f9b22103869c78ffe83fafba60223e2f67b9b",
     "provenance/code_only_contract.json": "72c40ae36672495e02c63ea4c92fd66475ba2b462fc8a1715db9852614672bed",
@@ -118,8 +118,8 @@
     "revision_20261015/protocols/reml_correction_stage2_20261018.json": "df0b6f4e28a7880b86bddacee61198e6eb431135a7ac98bcbaf2de6f95bb94df",
     "revision_20261015/protocols/reml_failure_audit_20261018.json": "52b24e5fef62520252e6d2ab854164f26f8a4ffb212eae8b2f7a53237ede34d7",
     "revision_20261015/protocols/score_eligibility_adapter_amendment_20261018.json": "7dd80c8c851260cb8112d2e24bb7cc23faa4394c9dfe455a7e86687f2011b325",
-    "simplified/INPUTS.md": "386730f04660ccefd421d803b06262a0c9fa5ff904363cb15191161c1e55de68",
-    "simplified/README.md": "752c347521b87b66fb0bb85e4957d0de5ca73bdb8a8afe74dda4003ad5dbc318",
+    "simplified/INPUTS.md": "73634e823389c4e8bcbce6089c2421ae2d9a11761038c265a3fcc526114c52ef",
+    "simplified/README.md": "45ab76ad2a746475f529917df41c718134517b19a772a5df7ecda1f4f9056c53",
     "simplified/article/figure_1/generate.py": "12d16e71733cc3e9444a494959a89ad485126065c4037f5a0ce176d7053165ee",
     "simplified/article/figure_2/generate.py": "68375b7f8ed0ecd7a8423d941ee1c9f4ec8db3b6b8090fddf88953af3529cf81",
     "simplified/article/figure_3/generate.py": "a7e1faa31368171d618dbbf97b6fdd19d1aa1332a2e370beb55c502573b9b62f",
