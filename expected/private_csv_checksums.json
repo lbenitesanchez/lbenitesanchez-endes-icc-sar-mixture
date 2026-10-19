@@ -1,0 +1,239 @@
+{
+  "format": "private-csv-checksums-v1",
+  "entries": {
+    "datos/private_competitors/households_2019.csv": {
+      "sha256": "40aaff9f3a46d0e0e22363fbed0db7d64b8a52355e8e4335e4dd710a2ed75f99",
+      "bytes": 2852880,
+      "rows": 37474,
+      "columns": [
+        "household_id",
+        "year",
+        "ubigeo",
+        "dept_code",
+        "prov_code",
+        "weight",
+        "psu",
+        "stratum",
+        "psu_key",
+        "cluster_altitude",
+        "interview_year"
+      ],
+      "individual_values_exported": false
+    },
+    "datos/private_competitors/children_2019.csv": {
+      "sha256": "a079bf1575eade65b94f90286998a25d606bb43dd6f687bc0f9abbfd253392d7",
+      "bytes": 4386854,
+      "rows": 19862,
+      "columns": [
+        "child_id",
+        "household_id",
+        "year",
+        "ubigeo",
+        "dept_code",
+        "prov_code",
+        "age_months",
+        "sex",
+        "weight",
+        "psu",
+        "stratum",
+        "psu_key",
+        "cluster_altitude",
+        "interview_year",
+        "de_facto",
+        "y_anemia_old",
+        "y_anemia_who2024",
+        "y_stunting",
+        "aux_altitude",
+        "aux_latitude",
+        "aux_longitude",
+        "aux_poverty",
+        "aux_electricity",
+        "aux_spanish",
+        "aux_illiteracy",
+        "aux_biomass",
+        "auxiliary_match"
+      ],
+      "individual_values_exported": false
+    },
+    "fase2_2026-10-07/datos/private_external/households_2024.csv": {
+      "sha256": "87ace0e2038854aebc4178a03bf1347679c76e573dfbf980e505bd178c5109c1",
+      "bytes": 2418529,
+      "rows": 37390,
+      "columns": [
+        "household_id",
+        "year",
+        "ubigeo",
+        "weight",
+        "psu",
+        "stratum",
+        "cluster_altitude",
+        "interview_year",
+        "psu_key"
+      ],
+      "individual_values_exported": false
+    },
+    "fase2_2026-10-07/datos/private_external/children_2024_training.csv": {
+      "sha256": "ea7e7dbf3ff6be1e7d971076cf5d53ee3b93a1b4e9430082f3af6593d6bd852e",
+      "bytes": 1344976,
+      "rows": 12438,
+      "columns": [
+        "child_id",
+        "household_id",
+        "year",
+        "ubigeo",
+        "dept_code",
+        "prov_code",
+        "age_months",
+        "sex",
+        "weight",
+        "psu",
+        "stratum",
+        "psu_key",
+        "cluster_altitude",
+        "interview_year",
+        "de_facto",
+        "y_anemia_old",
+        "y_anemia_who2024",
+        "y_stunting"
+      ],
+      "individual_values_exported": false
+    },
+    "fase2_2026-10-07/datos/private_external/children_2024_test.csv": {
+      "sha256": "e204b5c0939ec835e656923fc69707962c90bd5ed6789f073fae4a11dfc7c1ee",
+      "bytes": 645234,
+      "rows": 5959,
+      "columns": [
+        "child_id",
+        "household_id",
+        "year",
+        "ubigeo",
+        "dept_code",
+        "prov_code",
+        "age_months",
+        "sex",
+        "weight",
+        "psu",
+        "stratum",
+        "psu_key",
+        "cluster_altitude",
+        "interview_year",
+        "de_facto",
+        "y_anemia_old",
+        "y_anemia_who2024",
+        "y_stunting"
+      ],
+      "individual_values_exported": false
+    },
+    "fase2_2026-10-07/datos/private_external/children_2024_scoring_only.csv": {
+      "sha256": "a4657aaa08de94ede5b05963b4515ad5cb17d22561d0a81b8b47102d0e1f1040",
+      "bytes": 1989996,
+      "rows": 18397,
+      "columns": [
+        "child_id",
+        "household_id",
+        "year",
+        "ubigeo",
+        "dept_code",
+        "prov_code",
+        "age_months",
+        "sex",
+        "weight",
+        "psu",
+        "stratum",
+        "psu_key",
+        "cluster_altitude",
+        "interview_year",
+        "de_facto",
+        "y_anemia_old",
+        "y_anemia_who2024",
+        "y_stunting"
+      ],
+      "individual_values_exported": false
+    },
+    "sikov_2026-10-10/datos/real_2019_full/private/units.csv": {
+      "sha256": "a71b78223af9e3e58f8d4ccff94dbf98b4f02a9a931e759b60d99696de17e4ae",
+      "bytes": 2200689,
+      "rows": 19813,
+      "columns": [
+        "child_id",
+        "household_id",
+        "year",
+        "ubigeo",
+        "prov_code",
+        "area",
+        "age_months",
+        "sex",
+        "weight",
+        "psu",
+        "stratum",
+        "psu_key",
+        "de_facto",
+        "y_anemia",
+        "y_stunting",
+        "weight_anemia",
+        "weight_stunting"
+      ],
+      "individual_values_exported": false
+    },
+    "sikov_2026-10-10/datos/real_2024_training/private/units.csv": {
+      "sha256": "ee9cd385203749f036dd737a11a155daf26cfc071274ce472e0f0ea65db1482a",
+      "bytes": 1386931,
+      "rows": 12438,
+      "columns": [
+        "child_id",
+        "household_id",
+        "year",
+        "ubigeo",
+        "prov_code",
+        "area",
+        "age_months",
+        "sex",
+        "weight",
+        "psu",
+        "stratum",
+        "psu_key",
+        "de_facto",
+        "y_anemia",
+        "y_stunting",
+        "weight_anemia",
+        "weight_stunting"
+      ],
+      "individual_values_exported": false
+    }
+  },
+  "original_protocol_sha256": "45563a28075d39059f3e565957b5625b6e9b4bfe463f90f2130a8572419ce4f0",
+  "original_addendum_sha256": "7822176f48357b1ee9bf0a926fa44b74bafd3fc9c481a1ece878a8d5bd3b4427",
+  "public_aggregate_auxiliary_csv": {
+    "relative_path": "datos/processed/aux_all_districts.csv",
+    "sha256": "7d3d28778a5781dff364617c14f0cf0892022c8fb80ee0b33a83270d3e2fc511"
+  },
+  "raw_sav_checksums": {
+    "datos/raw/ENDES2019/Modulo64/RECH0.SAV": {
+      "sha256": "d63b55a504e2a50995ba2c7df34951f753e3ac2a8b4ac1d24c640cc04206e286",
+      "bytes": 7196426
+    },
+    "datos/raw/ENDES2019/Modulo64/RECH1.sav": {
+      "sha256": "376ff404d1bd6f83b073e3440e912b5be9563399fc99b5016af2686c9572b62f",
+      "bytes": 10357707
+    },
+    "datos/raw/ENDES2019/Modulo74/RECH6.SAV": {
+      "sha256": "b1d8cd3d69e3f779d18bea607f35a7b4a26d9dcfb39603c8729102796f467cf2",
+      "bytes": 3712317
+    },
+    "fase2_2026-10-07/datos/private_external_raw/RECH0_2024.SAV": {
+      "sha256": "f256895567267aa268f6fffebfaebebab17ea9ce8f11760569f3efbf0a3652db",
+      "bytes": 7255116
+    },
+    "fase2_2026-10-07/datos/private_external_raw/RECH1_2024.SAV": {
+      "sha256": "5eca6fe8a80951bb4e51b6494cd4beec03077cbdd33fc00ca5bdd434cbbd2fa9",
+      "bytes": 10969363
+    },
+    "fase2_2026-10-07/datos/private_external_raw/RECH6_2024.SAV": {
+      "sha256": "208eb4728db56f0e49d1b706d6a6c7dd6e4fa71390e8214c4318fe8bd0eb105b",
+      "bytes": 3460327
+    }
+  },
+  "builder_sha256": "35f1c647b21b780048f596d51466cd624e2bb2389a43a6a2082542031f8b9b6f",
+  "raw_or_individual_records_exported": false,
+  "interpretation": "An absent private reference is verified by exact reconstructed CSV bytes against its archived SHA-256, row count and column order; an absent file is never treated as an unchecked pass."
+}

@@ -1,0 +1,374 @@
+{
+  "status": "PASS_CODE_ONLY_FORMATTER_EXTRACTION_AND_PARITY",
+  "created_utc": "2026-10-18T15:44:14.331535+00:00",
+  "path": "src/estudio_publicacion/sikov_2026-10-10/scripts/report_documents.py",
+  "original_sha256": "8b14eb9bb87d17c4b587bb5df4a3a0b4ed85fffa35af2e4942083fc5dc2d728d",
+  "public_sha256": "d45f1dc2180c44f7065681c5bc533a3281390ddf8471fa01472a1809594b66dc",
+  "operation": "Verbatim source-segment extraction of five constants and ten table-formatting helpers; original AST function bodies unchanged.",
+  "retained_constants": [
+    "CONTEXTS",
+    "ENDPOINTS",
+    "LABELS",
+    "METHODS",
+    "REFERENCES"
+  ],
+  "retained_functions": [
+    "B300_rows",
+    "BC_rows",
+    "aggregate",
+    "aggregate_rows",
+    "context_rows",
+    "f",
+    "poverty_rows",
+    "primary_rows",
+    "sampled_graph_rows",
+    "sci"
+  ],
+  "removed_scope": "Narrative/interpretation templates; all document/Word/XML helpers, document assembly, static manuscript body, bibliography, title-page and cover-letter builders.",
+  "original_source_modified": false,
+  "statistical_algorithm_changed": false,
+  "validation_cases": 77,
+  "all_cases_equal": true,
+  "retained_function_AST_identity": true,
+  "checks": [
+    {
+      "case": "constant REFERENCES",
+      "equal": true
+    },
+    {
+      "case": "constant ENDPOINTS",
+      "equal": true
+    },
+    {
+      "case": "constant METHODS",
+      "equal": true
+    },
+    {
+      "case": "constant CONTEXTS",
+      "equal": true
+    },
+    {
+      "case": "constant LABELS",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 context_rows {}",
+      "equal": true,
+      "result_sha256": "5e47ccb9e71c35ea411974f7e3f8ecde4fe135f0287b887cf13a45c0a460f4c0"
+    },
+    {
+      "case": "historical_20261014 context_rows {\"include_icc\": true}",
+      "equal": true,
+      "result_sha256": "08edf89d482123429b2386405abffd44cef0d23e7dab841055b485b88c2d3abc"
+    },
+    {
+      "case": "historical_20261014 poverty_rows {}",
+      "equal": true,
+      "result_sha256": "fba0395e719d50af9e25167a024863e688cb82ec1f656705197652054c6960a4"
+    },
+    {
+      "case": "historical_20261014 poverty_rows {\"spanish\": true}",
+      "equal": true,
+      "result_sha256": "70cef0a0e929f46cbad8e59015c9231bc3bbedb98011d2955d9133bca76a1848"
+    },
+    {
+      "case": "historical_20261014 BC_rows {}",
+      "equal": true,
+      "result_sha256": "97ce85e9306a25694139096d0325330b9244b7f18d330eac77585860ca6f3caa"
+    },
+    {
+      "case": "historical_20261014 BC_rows {\"spanish\": true}",
+      "equal": true,
+      "result_sha256": "3971ba027e2d57fc67b4fc8e5816c159a5c80d8979ef8e2829735a40200228ea"
+    },
+    {
+      "case": "historical_20261014 B300_rows {}",
+      "equal": true,
+      "result_sha256": "2a7d9bc3ce591eb113a57f47247778a23de6dc47d1b266eeda77b0988b16613c"
+    },
+    {
+      "case": "historical_20261014 primary_rows {}",
+      "equal": true,
+      "result_sha256": "dcc9576640e9bad89976a803626d429adbfc3957c6fc9a5a93f0a9c685001af6"
+    },
+    {
+      "case": "historical_20261014 aggregate_rows {}",
+      "equal": true,
+      "result_sha256": "871bcb978ac53046a48802d1c778cc6a2877809d6833cca210cd8b246cf92cd2"
+    },
+    {
+      "case": "historical_20261014 aggregate_rows {\"spanish\": true}",
+      "equal": true,
+      "result_sha256": "b8719805c1d41d7388a1f689ee2b274fa5fdbdf6291545f59e8b8bdb2850e993"
+    },
+    {
+      "case": "historical_20261014 sampled_graph_rows {}",
+      "equal": true,
+      "result_sha256": "1cb0b6cc531dc0cac606b0b90400fcdd571bc2bcf428864685f30be7d21f7680"
+    },
+    {
+      "case": "historical_20261014 sampled_graph_rows {\"spanish\": true}",
+      "equal": true,
+      "result_sha256": "3b498aaeea7ae866365e881b66acdb0afaae85da8efecb690b2220e88d75ecc2"
+    },
+    {
+      "case": "historical_20261014 aggregate anemia Sikov_FH",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate anemia Sikov_SAR",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate anemia Sikov_SAR_Published",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate anemia ICC",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate anemia Selected",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate anemia Sikov_FH_BC",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate anemia Sikov_SAR_BC",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate anemia Sikov_SAR_Published_BC",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate stunting Sikov_FH",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate stunting Sikov_SAR",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate stunting Sikov_SAR_Published",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate stunting ICC",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate stunting Selected",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate stunting Sikov_FH_BC",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate stunting Sikov_SAR_BC",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 aggregate stunting Sikov_SAR_Published_BC",
+      "equal": true
+    },
+    {
+      "case": "historical_20261014 complete numeric table contract",
+      "equal": true,
+      "tables": 22,
+      "cells": 1488,
+      "result_sha256": "548d8fa17240bd295aa0fc72c2c866ed93f7e19ae67ac98d7a8f28eaab3e1060"
+    },
+    {
+      "case": "corrected_20261018 context_rows {}",
+      "equal": true,
+      "result_sha256": "fe7cd3bbd88047bcc822b4c340169c4f38c6ee97f4e1b5553b4d11756ee35097"
+    },
+    {
+      "case": "corrected_20261018 context_rows {\"include_icc\": true}",
+      "equal": true,
+      "result_sha256": "4faa01eff0b00812c9a038eb54cf28d218aa3d3bd3e0701fa3446e0398733587"
+    },
+    {
+      "case": "corrected_20261018 poverty_rows {}",
+      "equal": true,
+      "result_sha256": "5748541f9f58f3be2f0012d3ff8fe9eb60095c56d8a80f4930faa8cf35f7a124"
+    },
+    {
+      "case": "corrected_20261018 poverty_rows {\"spanish\": true}",
+      "equal": true,
+      "result_sha256": "97722fbea523080c45772a6b8e1122f424b0490bf508e1aa4ccc4dd6920f915e"
+    },
+    {
+      "case": "corrected_20261018 BC_rows {}",
+      "equal": true,
+      "result_sha256": "190305b69202605b63348d20e032fc8f93a885c224c36c9a0bb535c1d8124865"
+    },
+    {
+      "case": "corrected_20261018 BC_rows {\"spanish\": true}",
+      "equal": true,
+      "result_sha256": "17bf49f24af550f9ec46bac645e235f0eb680a97958682416d95422baae8e53f"
+    },
+    {
+      "case": "corrected_20261018 B300_rows {}",
+      "equal": true,
+      "result_sha256": "2a7d9bc3ce591eb113a57f47247778a23de6dc47d1b266eeda77b0988b16613c"
+    },
+    {
+      "case": "corrected_20261018 primary_rows {}",
+      "equal": true,
+      "result_sha256": "ea5923ee0967eabe1c6dd6c1837414adf2663aee69a2f2aa86c32523428a8c6d"
+    },
+    {
+      "case": "corrected_20261018 aggregate_rows {}",
+      "equal": true,
+      "result_sha256": "8fa03557611fa7a95fd48f48894f9b36ed7c0393348c48f57ceedb7da2fe3e89"
+    },
+    {
+      "case": "corrected_20261018 aggregate_rows {\"spanish\": true}",
+      "equal": true,
+      "result_sha256": "9dae30efb0e13b053938cc85e94b082718bada8e1096cdaea7f5c63ffb6eca16"
+    },
+    {
+      "case": "corrected_20261018 sampled_graph_rows {}",
+      "equal": true,
+      "result_sha256": "98beb2a1c92c1a8348f3b84bccf8bc320224082fd0e50a4966e22a8a3922023e"
+    },
+    {
+      "case": "corrected_20261018 sampled_graph_rows {\"spanish\": true}",
+      "equal": true,
+      "result_sha256": "d71065711308bb1a3ac19186bd2d03943f5a1d1d7799056d59ca37656c117781"
+    },
+    {
+      "case": "corrected_20261018 aggregate anemia Sikov_FH",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate anemia Sikov_SAR",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate anemia Sikov_SAR_Published",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate anemia ICC",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate anemia Selected",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate anemia Sikov_FH_BC",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate anemia Sikov_SAR_BC",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate anemia Sikov_SAR_Published_BC",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate stunting Sikov_FH",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate stunting Sikov_SAR",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate stunting Sikov_SAR_Published",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate stunting ICC",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate stunting Selected",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate stunting Sikov_FH_BC",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate stunting Sikov_SAR_BC",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 aggregate stunting Sikov_SAR_Published_BC",
+      "equal": true
+    },
+    {
+      "case": "corrected_20261018 complete numeric table contract",
+      "equal": true,
+      "tables": 22,
+      "cells": 1488,
+      "result_sha256": "de9b0c4e003be82b78e2c6f742257f75448e56bce6a175f0f918f5255b3ec31c"
+    },
+    {
+      "case": "f scalar 0.0",
+      "equal": true
+    },
+    {
+      "case": "sci scalar 0.0",
+      "equal": true
+    },
+    {
+      "case": "f scalar -1.234567",
+      "equal": true
+    },
+    {
+      "case": "sci scalar -1.234567",
+      "equal": true
+    },
+    {
+      "case": "f scalar 1e-250",
+      "equal": true
+    },
+    {
+      "case": "sci scalar 1e-250",
+      "equal": true
+    },
+    {
+      "case": "f scalar 1.99999999",
+      "equal": true
+    },
+    {
+      "case": "sci scalar 1.99999999",
+      "equal": true
+    },
+    {
+      "case": "f scalar nan",
+      "equal": true
+    },
+    {
+      "case": "sci scalar nan",
+      "equal": true
+    },
+    {
+      "case": "f scalar inf",
+      "equal": true
+    },
+    {
+      "case": "sci scalar inf",
+      "equal": true
+    },
+    {
+      "case": "f scalar -inf",
+      "equal": true
+    },
+    {
+      "case": "sci scalar -inf",
+      "equal": true
+    }
+  ],
+  "public_data_or_generated_document_included": false
+}

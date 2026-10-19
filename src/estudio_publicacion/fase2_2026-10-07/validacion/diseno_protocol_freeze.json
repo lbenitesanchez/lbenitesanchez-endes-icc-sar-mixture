@@ -1,0 +1,19 @@
+{
+  "status": "ROOT_APPROVED_SOURCE_AND_MODEL_DISPATCH",
+  "approved_for_model_dispatch": true,
+  "cut16_sensitivity_approved": true,
+  "source_sha256": {
+    "diseno_auxiliary_qa.py": "4b51308c9ecfb8886e36ac1ff86803bc9729f43409e7d8a60dffc22b51df400b",
+    "diseno_calibration.py": "b57f4b694c5d9e765f2a8b3ae6c9b9e481a560185c3d88973f29ba776303e999",
+    "diseno_fit_cut.py": "e11af978deebce20fe8d867fe205de3c6df6579d6c003d8d0b6bc3a94252e9fd",
+    "diseno_numerical_qa.py": "352e1f7b02d2b2a210118ef3b83b7332d112594718741b2588ad4d9efea5a802",
+    "diseno_prepare_development.py": "c61bc9d33625b6235a303a5b9de07aa140dd665cc2e72d77babaa6a5bbe910b5",
+    "diseno_protocol.json": "c11d391721180f38a9bda89d3c153cde0ee4854684cdacd2218683eb11c0c6da",
+    "diseno_sim_source_qa.py": "92feff4862f714db298744325e2b842234c373cb3b9964e92dbd8965d4bdfa91",
+    "diseno_validate_survey.R": "33c0167ccc252d4d8ae0b6d48098d74d78a50f52e699fb5bf9351401a4420d10"
+  },
+  "global_protocol_sha256": "c9d2b4eb7ad1f7acc928aa82124b226620f5a1dc170ec82371a63bbd0ec301d2",
+  "official_aux_sha256": "cbec2fc142ec0ee06dd247230f0b2253e11af04d0e0e76e8374f30b456df7502",
+  "common_2019_preparation_manifest_sha256": "5e990e0e71374536500849be3e9200765d37b8b2bb49dd69fbf372fc630378bb",
+  "scope": "No2024 responses until append-only access approval; all original16 kernels unchanged"
+}

@@ -1,0 +1,35 @@
+{
+  "format": "iaos-scoring-eligibility-implementation-repair-v1",
+  "recorded_utc": "2026-10-18T15:07:31.490497+00:00",
+  "role": "Post-lock scoring implementation repair, not a new scientific selection rule or prospective registration.",
+  "preparation_source": {
+    "path": "revision_20261015/code/reml_correction/preparation_adapter_19d7a57c.py",
+    "sha256": "19d7a57c0783361897b9f8367f9af19a33b968b060592f6d9fb7865a3b8a0531"
+  },
+  "scoring_source": {
+    "path": "revision_20261015/code/reml_correction/recalculate_corrected_results.py",
+    "sha256": "7ae360d781ef1a3dcdca5fb80bbc860589508146840752184a265bb9045adb13"
+  },
+  "native_prediction_lock_sha256": "c1fc6b548aebcc7937ebb32e68cae1f538065332f0e8bd24f95be30047606e96",
+  "prepared_prediction_lock_sha256": "bd768d8c07c722e67e65b904ef437c1c7825961369adf5902a8690cbde306d1e",
+  "registered_development_plan_sha256": "baa077e61f6534269d877f8884bebce3e6fb011890916a4a60fc9b4ee93c4759",
+  "candidate_methods": [
+    "ICC",
+    "ICC_poverty",
+    "ICC_SAR_w25",
+    "ICC_SAR_w50",
+    "ICC_SAR_w75"
+  ],
+  "exact_repair": "Filter the seven scored strategies to the five registered candidate_methods before calling the unchanged selector, as the original finalize_development implementation does. Keep FH and SAR rows in the full score matrix.",
+  "changed_function": "score_development",
+  "old_call": "selection.select(frame, read(folder / 'development_plan.json'))",
+  "new_call": "selection.select(frame.loc[frame.method.isin(plan['candidate_methods'])].copy(), plan)",
+  "prepare_AST_unchanged": true,
+  "all_other_module_AST_unchanged": true,
+  "only_registered_candidate_filter_added": true,
+  "primary_ICC_weight": 0.75,
+  "models_seeds_graphs_bootstrap_or_predictions_changed": false,
+  "native_or_prepared_locks_rewritten": false,
+  "development_truth_read_only_after_both_complete_locks": true,
+  "earlier_failed_attempt_preserved": true
+}

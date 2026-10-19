@@ -1,0 +1,273 @@
+[
+  {
+    "number": "1",
+    "original_sha256": "945c6c510d8b5cc74c4906c6ed319522e0ca4051d7a74834b6d76c917b4cd72b",
+    "reference_csv": "referencias/Articulo/Tabla_1.csv",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_collect.py",
+      "reproduction/article_coverage.py"
+    ],
+    "id": "Article_Table_1",
+    "legacy_id": "Articulo_Tabla_1",
+    "folder": "article/table_1",
+    "kind": "Table",
+    "title": "Aggregate estimator performance"
+  },
+  {
+    "number": "2",
+    "original_sha256": "85996112f17615a20a44b19aebe1b7c8ce567a89376d4afda5fb8a6a9e0fab5f",
+    "reference_csv": "referencias/Articulo/Tabla_2.csv",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_collect.py",
+      "reproduction/article_coverage.py"
+    ],
+    "id": "Article_Table_2",
+    "legacy_id": "Articulo_Tabla_2",
+    "folder": "article/table_2",
+    "kind": "Table",
+    "title": "Primary Holm3 contrasts"
+  },
+  {
+    "number": "1",
+    "original_sha256": "e10bc62594f717233d246a85d8012cb30756f1849e8e15b53acaddac562c974b",
+    "expected_numeric_artist_sha256": "0edb50f4ecc25737fcfec690a4d79921e168f0b026ed44a01dc849d192a45311",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_figures.py",
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_figures.py"
+    ],
+    "id": "Article_Figure_1",
+    "legacy_id": "Articulo_Figura_1",
+    "folder": "article/figure_1",
+    "kind": "Figure",
+    "title": "RMSE and interval coverage"
+  },
+  {
+    "number": "3",
+    "original_sha256": "e9312413156f267067beb949ee5cad850ae02e0c11169daac797068eb576eabc",
+    "reference_csv": "referencias/Articulo/Tabla_3.csv",
+    "source_files": [
+      "revision_20261015/code/incremental_icc.py"
+    ],
+    "id": "Article_Table_3",
+    "legacy_id": "Articulo_Tabla_3",
+    "folder": "article/table_3",
+    "kind": "Table",
+    "title": "Incremental comparison with ICC"
+  },
+  {
+    "number": "2",
+    "original_sha256": "552015e9f1148730b4ae35af5b1479c0195f74a55647a063b78eafead1a02b6f",
+    "expected_numeric_artist_sha256": "c6acbbbe9a306ab292272ba6af3e109f77b337458cccdf5dcb2729e941571924",
+    "source_files": [
+      "revision_20261015/code/incremental_icc.py"
+    ],
+    "id": "Article_Figure_2",
+    "legacy_id": "Articulo_Figura_2",
+    "folder": "article/figure_2",
+    "kind": "Figure",
+    "title": "Paired differences against ICC"
+  },
+  {
+    "number": "4",
+    "original_sha256": "2d59846209fd6f55df2bb4b6c89d588652c3c1aa9f5cd17d7d01fff1475b8d29",
+    "reference_csv": "referencias/Articulo/Tabla_4.csv",
+    "source_files": [
+      "revision_20261015/code/numerical_cohorts_portable.py"
+    ],
+    "id": "Article_Table_4",
+    "legacy_id": "Articulo_Tabla_4",
+    "folder": "article/table_4",
+    "kind": "Table",
+    "title": "Independent sparse57 sensitivity"
+  },
+  {
+    "number": "3",
+    "original_sha256": "ca032953eca26d57410b8b0f5dd8b442e9177f0d00d693addc440e0ac2dfc831",
+    "expected_numeric_artist_sha256": "a8e11806f4db7297f690db795df7beddcc97b53082a9e02f04c441d9366da453",
+    "source_files": [
+      "revision_20261015/code/numerical_cohorts_portable.py"
+    ],
+    "id": "Article_Figure_3",
+    "legacy_id": "Articulo_Figura_3",
+    "folder": "article/figure_3",
+    "kind": "Figure",
+    "title": "Sparse57 contrasts"
+  },
+  {
+    "number": "5",
+    "original_sha256": "c8c975c85ee5d9b08ac487e2d11f3bec9ed177040b8eb92150d2c2f4cee217e7",
+    "reference_csv": "referencias/Articulo/Tabla_5.csv",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_extended_score.py",
+      "reproduction/article_coverage.py"
+    ],
+    "id": "Article_Table_5",
+    "legacy_id": "Articulo_Tabla_5",
+    "folder": "article/table_5",
+    "kind": "Table",
+    "title": "Secondary Holm12 contrasts"
+  },
+  {
+    "number": "S1",
+    "original_sha256": "f170e90b34b10eb228906b43a0e6a1a3250606e14619282d2c10135e2ff2491e",
+    "reference_csv": "referencias/Suplemento/Tabla_S1.csv",
+    "source_files": [
+      "revision_20261015/code/numerical_cohorts_portable.py"
+    ],
+    "id": "Supplement_Table_S1",
+    "legacy_id": "Suplemento_Tabla_S1",
+    "folder": "supplement/table_s1",
+    "kind": "Table",
+    "title": "Laplace and NUTS development"
+  },
+  {
+    "number": "S2",
+    "original_sha256": "34f646c2d8742bb791f844920eb933a96b5b5336a67ee0e9e6dd6f996b4a4a06",
+    "reference_csv": "referencias/Suplemento/Tabla_S2.csv",
+    "source_files": [
+      "revision_20261015/code/incremental_icc.py"
+    ],
+    "id": "Supplement_Table_S2",
+    "legacy_id": "Suplemento_Tabla_S2",
+    "folder": "supplement/table_s2",
+    "kind": "Table",
+    "title": "Comparisons by context and support"
+  },
+  {
+    "number": "S3",
+    "original_sha256": "9ab0078c2cbbabf309776e32be737bcd11c9cda37daf2a7940c7fcd8dfcb18df",
+    "reference_csv": "referencias/Suplemento/Tabla_S3.csv",
+    "source_files": [
+      "revision_20261015/code/numerical_cohorts_portable.py"
+    ],
+    "id": "Supplement_Table_S3",
+    "legacy_id": "Suplemento_Tabla_S3",
+    "folder": "supplement/table_s3",
+    "kind": "Table",
+    "title": "Sparse57 sensitivity by district support"
+  },
+  {
+    "number": "S4",
+    "original_sha256": "736ebb1fcea954563084cd63d845c34b872406a561855a5e2fc3a6fe6e15619c",
+    "reference_csv": "referencias/Suplemento/Tabla_S4.csv",
+    "source_files": [
+      "revision_20261015/code/diagnostics_inventory.py"
+    ],
+    "id": "Supplement_Table_S4",
+    "legacy_id": "Suplemento_Tabla_S4",
+    "folder": "supplement/table_s4",
+    "kind": "Table",
+    "title": "Computational diagnostics"
+  },
+  {
+    "number": "S5",
+    "original_sha256": "340d3a2ff3a8208cc4675a265d0d54a36b86519864fae3a65164e5cd7ff0fb02",
+    "reference_csv": "referencias/Suplemento/Tabla_S5.csv",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_collect.py",
+      "reproduction/article_coverage.py"
+    ],
+    "id": "Supplement_Table_S5",
+    "legacy_id": "Suplemento_Tabla_S5",
+    "folder": "supplement/table_s5",
+    "kind": "Table",
+    "title": "Common probability-bound projection"
+  },
+  {
+    "number": "S6",
+    "original_sha256": "8e134c43317c5d8afe06bb5500bd861fc23b77fdae98c8696facdab007629c0b",
+    "reference_csv": "referencias/Suplemento/Tabla_S6.csv",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_collect.py",
+      "reproduction/article_coverage.py"
+    ],
+    "id": "Supplement_Table_S6",
+    "legacy_id": "Suplemento_Tabla_S6",
+    "folder": "supplement/table_s6",
+    "kind": "Table",
+    "title": "Bias-corrected Gaussian intervals"
+  },
+  {
+    "number": "S7",
+    "original_sha256": "5ad54ac04a733a424da64507294e8639e6cd9807e5c57f54f9d795fb4aa02364",
+    "reference_csv": "referencias/Suplemento/Tabla_S7.csv",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap_sensitivity.py",
+      "reproduction/article_coverage.py"
+    ],
+    "id": "Supplement_Table_S7",
+    "legacy_id": "Suplemento_Tabla_S7",
+    "folder": "supplement/table_s7",
+    "kind": "Table",
+    "title": "Bootstrap-size sensitivity"
+  },
+  {
+    "number": "S8",
+    "original_sha256": "6e7ffec4e164a071e22d0f0465b0f48e029584e6ea7a6acd04c641b1c6aaa6b7",
+    "reference_csv": "referencias/Suplemento/Tabla_S8.csv",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_poverty_stratum_descriptive.py",
+      "reproduction/article_coverage.py"
+    ],
+    "id": "Supplement_Table_S8",
+    "legacy_id": "Suplemento_Tabla_S8",
+    "folder": "supplement/table_s8",
+    "kind": "Table",
+    "title": "Poverty-stratum contrasts"
+  },
+  {
+    "number": "S9",
+    "original_sha256": "d22784f26a9315aa1b8b6d005520304ed15a9297ccbf1bef8389e2641b59f8f1",
+    "reference_csv": "referencias/Suplemento/Tabla_S9.csv",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_score.py",
+      "reproduction/article_coverage.py"
+    ],
+    "id": "Supplement_Table_S9",
+    "legacy_id": "Suplemento_Tabla_S9",
+    "folder": "supplement/table_s9",
+    "kind": "Table",
+    "title": "Graph-mechanism sensitivity"
+  },
+  {
+    "number": "S1",
+    "original_sha256": "c6987b18c95d09ce83ea913e4928b488aa04e129623c0f993d0f97830f7a27ab",
+    "expected_numeric_artist_sha256": "3e544a1064f945fce403017f90e6702737a2bf474c3dc42cd07d90690e129d0c",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_figures.py",
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_figures.py"
+    ],
+    "id": "Supplement_Figure_S1",
+    "legacy_id": "Suplemento_Figura_S1",
+    "folder": "supplement/figure_s1",
+    "kind": "Figure",
+    "title": "Interval score and common projection"
+  },
+  {
+    "number": "S2",
+    "original_sha256": "2d8ce075983784c88e8e22d9b83a70203286545d533af0950cbffc95a248be86",
+    "expected_numeric_artist_sha256": "f53c50af18487ca04b6abf4eec1d03b644bb2d1de36ab77a27ed9ef0a9bf8ac3",
+    "source_files": [
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_application_figures.py",
+      "src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_application_figures.py"
+    ],
+    "id": "Supplement_Figure_S2",
+    "legacy_id": "Suplemento_Figura_S2",
+    "folder": "supplement/figure_s2",
+    "kind": "Figure",
+    "title": "Descriptive district application map"
+  },
+  {
+    "number": "S23",
+    "original_sha256": "8e026b8e3ef16ad39cd0e9d9c1cee9eb55c7eb156db96c893d956cec97654257",
+    "reference_csv": "referencias/Suplemento/Tabla_S23.csv",
+    "source_files": [
+      "revision_20261015/code/reml_correction/corrected_diagnostic_editorial.py"
+    ],
+    "id": "Supplement_Table_S23",
+    "legacy_id": "Suplemento_Tabla_S23",
+    "folder": "supplement/table_s23",
+    "kind": "Table",
+    "title": "Numerical-correction accounting"
+  }
+]

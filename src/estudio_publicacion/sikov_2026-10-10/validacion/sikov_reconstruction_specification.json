@@ -1,0 +1,93 @@
+{
+  "status": "faithful_model_reconstruction_not_exact_numerical_replication",
+  "equations": {
+    "sampling": "y_s = X_s beta + u_s + e_s, e_s~N(0,diag(D_s))",
+    "FH": "u~N(0,A I)",
+    "SAR": "u = rho W u + epsilon, epsilon~N(0,A I)",
+    "SAR_covariance": "A (I-rho W)^-1 (I-rho W)^-T",
+    "reml": "minimize .5[log|V|+log|Xs^T V^-1 Xs|+y^T P y+(n-p)log(2pi)]",
+    "SEBLUP_allareas": "Xall betaHat + G_all,s V^-1 (ys-Xs betaHat)"
+  },
+  "published_settings": {
+    "link": "identity raw proportion",
+    "estimation": "REML",
+    "outcomes": [
+      "anemia",
+      "stunting"
+    ],
+    "poverty_strata": [
+      "<.30",
+      ">.30 and <.55",
+      ">.55"
+    ],
+    "separate_regressions": true,
+    "published_sampled_district_counts": [
+      234,
+      271,
+      260
+    ],
+    "published_total_district_counts": [
+      618,
+      671,
+      585
+    ],
+    "published_tables_covariates": "TABLE_COVARIATES in scripts/sikov_model.py",
+    "geography": "coordinates, row standardized W, diagonal zero",
+    "MSE": "Parametric bootstrap procedure Molina et al (2009), explicitly stated in English abstract p172; details/B/bias correction not given in Apuntes text."
+  },
+  "reconstruction_decisions": {
+    "poverty_boundary": "[0,.30), [.30,.55], (.55,1] explicit convention",
+    "primary_W": "within poverty stratum directed Euclidean longitude/latitude kNN6, row normalized; based on local later scripts, not established author W",
+    "W_sensitivities": [
+      "within-stratum kNN4",
+      "within-stratum kNN8",
+      "haversine kNN geometry sensitivity if feasible"
+    ],
+    "missing_areas": "all areas retained in latent SAR graph; only sampled response/variance enter restricted likelihood",
+    "rho_bounds": [
+      -0.999,
+      0.999
+    ],
+    "variance_boundary": "A=0 supported; rho then not identified",
+    "intervals": "Primary naive parametric REML bootstrap B100 MSE; BC same draws descriptive sensitivity; Gaussian 95% intervals not specified in original article; no prediction clipping.",
+    "interval_specification_in_article": false,
+    "covariate_selection": "freeze published table lists, no variable selection using holdout",
+    "outcome_covariate_inputs": "fractions except Altitud in km, intercept=1",
+    "prediction_clipping": false,
+    "variance_regularization": "none implicit; caller must document any GVF or floors",
+    "rho_bounds_rationale": "CRAN sae1.3 Fisher update safeguard +/-0.999; final rounding to +/-1 in sae may be singular; retain interior bound. Expanded from +/-0.98 before final evaluation, no truth used.",
+    "rho_negative_allowed": true
+  },
+  "nonidentifiable_original_details": [
+    "exact district direct estimates and sampling variances",
+    "outcome definition inconsistency percentile10 vs2.5 and clinical age restrictions",
+    "actual authors W, k or distance threshold",
+    "whether W defined across all strata then restricted or rebuilt perstratum",
+    "exact source/vintage/point estimates for district poverty (our midpoint2018 gives 786/888/200 vs published618/671/585)",
+    "semantic Census covariate aggregation for Cemento and Agua",
+    "variable selection path and p-value threshold",
+    "numerical optimizer and starting values",
+    "Parametric bootstrap algorithm B and bias-correction choice, interval distribution and level (MSE method named in English abstract, specifics not given)",
+    "author source code not located in search"
+  ],
+  "fair_comparison": {
+    "same_training_data": true,
+    "same_holdout_response_masks": true,
+    "same_outcome_definitions": true,
+    "frozen_W_and_covariate_selection_before_evaluation": true,
+    "external_direct_uncertainty_required_for_real_data": true,
+    "exact_numeric_match_claim_allowed": false
+  },
+  "additional_primary_author_evidence": {
+    "parallel_2023_article": "https://link.springer.com/article/10.1007/s10260-023-00698-x",
+    "appendixA": "emdi::fh(method=reml, correlation=spatial, corMatrix=W, mse_type=spatialparbootbc); K symbolic without numeric value",
+    "parallel_paper_is_exact_Apuntes_source_code": false,
+    "arxiv_Apuntes_version": "https://arxiv.org/abs/2311.04812",
+    "official_galleys": [
+      "PDF (1695)",
+      "HTML (1962)"
+    ],
+    "no_explicit_code_or_data_supplement_found_in_original_publisher_page": true,
+    "poverty_source_status": "Apuntes says Census2017 auxiliaries, but no poverty-point source/vintage; SISFOH2012-2013 is survey sampling frame description, cannot infer original poverty map2013."
+  }
+}

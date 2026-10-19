@@ -1,0 +1,2947 @@
+{
+  "status": "PASS_INDEPENDENT_PUBLIC_CODE_ONLY_PUBLICATION_AUDIT",
+  "created_utc": "2026-10-18T15:54:33.118837+00:00",
+  "scope": "Independent read-only audit of the frozen code-only publication payload. No article, supplementary document, cover letter, raw data, saved results or figures are included. Runtime caches and version-control internals are outside the candidate.",
+  "candidate_file_count_before_this_audit": 381,
+  "indexed_file_count": 380,
+  "python_files_syntax_checked": 312,
+  "json_files_syntax_checked": 21,
+  "extension_counts": {
+    ".gitattributes": 1,
+    ".gitignore": 1,
+    ".cff": 1,
+    ".md": 3,
+    ".json": 21,
+    ".py": 312,
+    ".txt": 4,
+    ".sha256": 1,
+    ".r": 24,
+    ".stan": 13
+  },
+  "historical_source_lineage_record_count": 354,
+  "historical_source_policy_counts": {
+    "portable_paths_only": 6,
+    "exact_original": 337,
+    "editorial_source_omitted": 8,
+    "numerical_table_formatters_only": 1,
+    "tables_only_contract": 2
+  },
+  "original_frozen_statistical_source_count": 37,
+  "core_kernel_sha256": {
+    "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_model.py": "81fab848a488d11c9c1b63541a0732d96bfbb62043ac1e388b03cd135b4606a9",
+    "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap.py": "591ce36a649ca88f3fd39e28518184f089c6561c284b8d901928fff31d58e99c",
+    "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_reference.py": "573a884bdaee00069e17e0d1fb7a8863a50d282f95e1dee6f64759d4305db4a3",
+    "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_fit.py": "3e0e55252ca789c292b890cf8025de6b450e83fe608fad9f34a9eda2ce5adc43"
+  },
+  "release_inventory_sha256": "061e7019ea1e34b67cae404fc9f04986f50f7caed1195adec3221a21e3dba58d",
+  "source_lineage_manifest_sha256": "74a19c6b4fb4a72e42aa74d65e4366927f6206754d98e69fa25d30dbce0d1467",
+  "portability_receipt_sha256": "d8887db186cd5b139689d15da30851e385dc6ed1c36acf035fb31986fbc679e2",
+  "indexed_payload_identity_sha256": "6d7cfa4f59813c241757b35141fb908265500109ff15df0ccfbeb1f3848b77f4",
+  "checks_total": 723,
+  "checks_passed": 723,
+  "checks": [
+    {
+      "check": "strict code/configuration/requirements/instructions allowlist; no binaries, documents, data, outputs or embedded paper prose",
+      "passed": true
+    },
+    {
+      "check": "all 380 indexed public files match exact SHA256 inventory",
+      "passed": true
+    },
+    {
+      "check": "publication audit explicitly excluded from recursive self index",
+      "passed": true
+    },
+    {
+      "check": "354 exact historical source lineage records",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/01_prepare_data.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/01_prepare_data.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/09_continuity_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/09_continuity_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/06_build_documents.py",
+      "passed": true
+    },
+    {
+      "check": "omitted-editorial src/estudio_publicacion/scripts/06_build_documents.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/13_competitor_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/13_competitor_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/validate_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/validate_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/04_summarize_simulations.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/04_summarize_simulations.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/validate_sparse_variance.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/validate_sparse_variance.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/07_application_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/07_application_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/01b_validate_data.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/01b_validate_data.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/11_application_comparison.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/11_application_comparison.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/12_competitor_documents.py",
+      "passed": true
+    },
+    {
+      "check": "omitted-editorial src/estudio_publicacion/scripts/12_competitor_documents.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/05_validate_model.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/05_validate_model.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/10_package_publication.py",
+      "passed": true
+    },
+    {
+      "check": "omitted-editorial src/estudio_publicacion/scripts/10_package_publication.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/01c_singleton_sensitivity.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/01c_singleton_sensitivity.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/02_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/02_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/03c_srs_df_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/03c_srs_df_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/11_export_unit_inputs.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/11_export_unit_inputs.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/14_package_competitors.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/14_package_competitors.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/08_results_narrative.py",
+      "passed": true
+    },
+    {
+      "check": "omitted-editorial src/estudio_publicacion/scripts/08_results_narrative.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/compare_reconstruction.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/compare_reconstruction.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/01_prepare_data.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/01_prepare_data.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/09_continuity_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/09_continuity_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/06_build_documents.py",
+      "passed": true
+    },
+    {
+      "check": "omitted-editorial src/estudio_publicacion/codigo/06_build_documents.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/validate_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/validate_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/04_summarize_simulations.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/04_summarize_simulations.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/07_application_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/07_application_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/portable_import_check.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/portable_import_check.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/05_validate_model.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/05_validate_model.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/install_R_dependencies.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/install_R_dependencies.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/download_official_data.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/download_official_data.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/prepare_analysis_run.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/prepare_analysis_run.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/02_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/02_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/03c_srs_df_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/03c_srs_df_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/refresh_public_provenance.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/refresh_public_provenance.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/verify_aggregate_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/verify_aggregate_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/08_results_narrative.py",
+      "passed": true
+    },
+    {
+      "check": "omitted-editorial src/estudio_publicacion/codigo/08_results_narrative.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/srs_df_ablation/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/srs_df_ablation/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/srs_df_ablation/03c_srs_df_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/srs_df_ablation/03c_srs_df_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/full_v1/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/full_v1/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/full_v1/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/full_v1/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/finite_v2/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/finite_v2/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/finite_v2/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/finite_v2/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/ablation_v2/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/ablation_v2/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/ablation_v2/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/ablation_v2/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2_fix/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2_fix/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2_fix/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2_fix/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2_fix/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_smoke_v2_fix/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_v2/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_v2/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_v2/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_v2/03b_sparse_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_v2/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/sparse_v2/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/bootstrap_v1/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/bootstrap_v1/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/bootstrap_v1/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/bootstrap_v1/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/bootstrap_benchmark/models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/bootstrap_benchmark/models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/bootstrap_benchmark/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/resultados/simulaciones/source_snapshots/bootstrap_benchmark/03_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_extended_score_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_extended_score_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/public_package.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/public_package.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_score.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_score.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_build_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_build_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_poverty_stratum_descriptive.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_poverty_stratum_descriptive.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/improve_native_development.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/improve_native_development.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_b300_sensitivity.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_b300_sensitivity.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_poverty_stratum_descriptive_v1_invalid_labels.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_poverty_stratum_descriptive_v1_invalid_labels.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_collect.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_collect.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_joint_close.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_joint_close.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_final_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_final_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_validate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_validate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_score.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_score.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_afterfits.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_afterfits.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_after_prediction_lock.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_after_prediction_lock.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_contract_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_contract_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_fit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_fit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_real_training.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_real_training.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_validate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_validate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_setup.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_setup.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/report_documents.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/report_documents.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_full_graph_scope_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_full_graph_scope_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_extended_score.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_extended_score.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_freeze.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_freeze.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/improve_development.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/improve_development.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_boundary_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_boundary_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/improve_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/improve_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_score_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_score_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/public_verify.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/public_verify.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_reference.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_reference.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap_sensitivity.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap_sensitivity.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_sae_reference.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_sae_reference.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_survey_2019.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_survey_2019.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_evaluate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_evaluate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_training_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_training_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap_reference.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap_reference.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_model.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_model.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_validate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_validate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_extended_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_external_extended_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_fit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_fit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_collect_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_collect_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_census_queries.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_census_queries.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_real.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_real.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/public_replay.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/public_replay.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_application_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_application_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_generate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sensitivity_sampled_graph_generate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_collect.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_collect.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_aux_sikov.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/align_aux_sikov.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/improve_select.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/improve_select.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap_validate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap_validate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_freeze.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/scripts/comparison_freeze.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/sikov_bootstrap.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/sikov_bootstrap.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/improve_native_development.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/improve_native_development.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/beta_power.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/beta_power.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/improve_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/improve_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/sikov_model.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/sikov_model.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/beta_power_stable.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/beta_power_stable.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/comparison_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/comparison_simulation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/improve_select.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/sikov_2026-10-10/desarrollo/improve_development_v4_native_rho999/source_snapshots/improve_select.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/public_competitors/install_python.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/public_competitors/install_python.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/public_competitors/reproduce.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/public_competitors/reproduce.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/public_competitors/fetch_gao_reference.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/public_competitors/fetch_gao_reference.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/public_competitors/reproduce_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/public_competitors/reproduce_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/public_competitors/install_r.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/public_competitors/install_r.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/public_competitors/reproduce_all.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/public_competitors/reproduce_all.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/public_competitors/hogg_collect_tasks.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/public_competitors/hogg_collect_tasks.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/public_competitors/public_copy_provenance.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/public_competitors/public_copy_provenance.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_progress.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_progress.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_hmc.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_hmc.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage1.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage1.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_validate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_validate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_validate_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_validate_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_tsln.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_tsln.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_continue_after.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_continue_after.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_validate_author.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_validate_author.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_validate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_validate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_validate_stage2.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_validate_stage2.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_prepare_extension.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_prepare_extension.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_validate_final_results.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_validate_final_results.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_design_extension.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_design_extension.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application_queue_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application_queue_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_validate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_validate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_secondary_accounting.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_secondary_accounting.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_run_endes.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_run_endes.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_compare.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_compare.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_sensitivity_lane_handoff.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_sensitivity_lane_handoff.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_endes_worker.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_endes_worker.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_prepare_final.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_prepare_final.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_vectorized.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_vectorized.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2_bym2.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2_bym2.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_after_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_after_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_schedule_spatial_evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_schedule_spatial_evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_wait_gao_capacity.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_wait_gao_capacity.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application_recovery.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application_recovery.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_hybrid.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_hybrid.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_run.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_run.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_schedule_evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_schedule_evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2_design_extension.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2_design_extension.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_final_audit_watch.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_final_audit_watch.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_boundary_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_boundary_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_run_synthetic.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_run_synthetic.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_structural.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_structural.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_numeric.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_numeric.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_application_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_application_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_hmc.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_hmc.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_final_execution_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_final_execution_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_application_scores.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_application_scores.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_queue.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_queue.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_numerical_pilot_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_numerical_pilot_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_dispatch_final.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_dispatch_final.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_strong_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_strong_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_after_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_after_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_schedule_candidate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_schedule_candidate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_finalize.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_finalize.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_spatial_evaluate.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_spatial_evaluate.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_final_zip_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_final_zip_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_stage2.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_stage2.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2_full_reference.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2_full_reference.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_reference.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_reference.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_primary_score.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_primary_score.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_independent_final_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_independent_final_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_final_audit_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_final_audit_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_collect.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_collect.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_generic_after_spatial.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_generic_after_spatial.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application_sensitivities.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application_sensitivities.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_metrics.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_metrics.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_batch.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_batch.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_stable.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_stable.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_wait_sensitivity_capacity.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_wait_sensitivity_capacity.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_sensitivity_scores.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_sensitivity_scores.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_stage1.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_stage1.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_check_endes_stage1.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_check_endes_stage1.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_scout.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_spatial_scout.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_candidate_to_hogg.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_candidate_to_hogg.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_application_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_prepare_endes.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_prepare_endes.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/gao_worker.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/gao_worker.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_benchmark_batch.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_benchmark_batch.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/beta_power_stable_functions.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/beta_power_stable_functions.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2_bym2_full_reference.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/hogg_stage2_bym2_full_reference.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/scripts/competitors/benchmark_spatial_evaluator_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/scripts/competitors/benchmark_spatial_evaluator_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/codigo/provenance_models/models_full_v1.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/codigo/provenance_models/models_full_v1.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/root_run_simulation_cohort.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/root_run_simulation_cohort.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_redatam.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_redatam.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_directorio2024.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_directorio2024.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_validate_survey.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_validate_survey.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/application2025_baseline.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/application2025_baseline.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_household_frame_only.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_household_frame_only.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_external_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_external_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_age_sex.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_age_sex.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_helpers.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_helpers.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_lock_predictions.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_lock_predictions.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_simulation_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_simulation_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_fit_models.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_fit_models.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_recover_hogg_status.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_recover_hogg_status.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_poverty.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_poverty.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_prepare_training.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_prepare_training.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_score_external.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_score_external.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_fit_cut.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_fit_cut.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/verify_public_release.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/verify_public_release.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_package.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_package.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_prepare_reserved.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_prepare_reserved.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_sim_source_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_sim_source_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_directorio.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_directorio.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_document_checks.py",
+      "passed": true
+    },
+    {
+      "check": "omitted-editorial src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_document_checks.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_fit_design_reserved.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_fit_design_reserved.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/sim_design_diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/sim_design_diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_2024_operations.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_2024_operations.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_documents.py",
+      "passed": true
+    },
+    {
+      "check": "omitted-editorial src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_documents.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_polygon_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_polygon_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_aux.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_aux.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_archive_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_archive_independent_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_application_summary.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_application_summary.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_calibration.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_calibration.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_numerical_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_numerical_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/root_freeze_phase2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/root_freeze_phase2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_auxiliary_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_auxiliary_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_score_qa.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_score_qa.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_final_fit_scope_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_final_fit_scope_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_independent_freeze_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_independent_freeze_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_results_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/phase2_results_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_parse_reserved.R",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_parse_reserved.R",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_download_sources.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_download_sources.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_external_download.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_external_download.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_independent_check.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/geografia_independent_check.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_prepare_development.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/diseno_prepare_development.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_models/beta_power_hybrid.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_models/beta_power_hybrid.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_models/beta_power_stable_functions.stan",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity src/estudio_publicacion/fase2_2026-10-07/scripts/validacion_models/beta_power_stable_functions.stan",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/real_worker.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/real_worker.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/test_prediction_interpretation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/test_prediction_interpretation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/real_materialize_reference.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/real_materialize_reference.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/sikov_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/sikov_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/real_score.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/real_score.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/sikov_worker.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/sikov_worker.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/sanitize_revision_evidence.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/sanitize_revision_evidence.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/prediction_MCSE.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/prediction_MCSE.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_accelerate_gao.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_accelerate_gao.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/export_legacy_support_differences.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/export_legacy_support_differences.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/capture_private_stan_state.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/capture_private_stan_state.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/compile_runtime.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/compile_runtime.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_figures.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_reference.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_reference.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_publication_layout.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_publication_layout.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_execution_summary.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_execution_summary.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/strict_csv_schema.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/strict_csv_schema.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/input_claim_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/input_claim_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/export_public_fresh_legacy_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/export_public_fresh_legacy_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/real_portable_worker.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/real_portable_worker.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/real_private_catalog.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/real_private_catalog.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/sikov_canonical_icc_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/sikov_canonical_icc_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/article_coverage.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/article_coverage.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/strict_csv_schema_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/strict_csv_schema_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/current_protocol_metadata_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/current_protocol_metadata_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_compare.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_compare.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/export_public_fresh_results.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/export_public_fresh_results.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/sikov_map_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/sikov_map_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_input_audit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_input_audit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_v2_catalogue_verify.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_v2_catalogue_verify.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/real_basis_check.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/real_basis_check.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/sampled_prefit.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/sampled_prefit.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_publication_normalize.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_publication_normalize.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_input_catalogue.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_input_catalogue.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/export_public_fresh_legacy.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/export_public_fresh_legacy.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_previous800_relay.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_previous800_relay.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/real_current_basis_lock.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/real_current_basis_lock.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/prediction_interpretation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/prediction_interpretation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_parallel_stages.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_parallel_stages.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/test_strict_csv_schema_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/test_strict_csv_schema_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_worker.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_worker.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/run_all.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/run_all.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_orientation_adapter.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_orientation_adapter.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/sikov_nuts_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/sikov_nuts_diagnostic.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/sikov_score.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/sikov_score.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_runner.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_runner.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_v2_runner.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_v2_runner.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/current_revision_contract.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/current_revision_contract.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/legacy_v2_worker.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/legacy_v2_worker.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/status.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/status.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity reproduction/real_portable_prepare.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity reproduction/real_portable_prepare.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/numerical_diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/numerical_diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/verify_numerical_cohorts_portable.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/verify_numerical_cohorts_portable.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/audit_new_generation_hashes.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/audit_new_generation_hashes.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/export_new_method_times.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/export_new_method_times.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/diagnostics_inventory.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/diagnostics_inventory.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/annotate_sparse57_generation.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/annotate_sparse57_generation.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/incremental_icc.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/incremental_icc.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/cohort_extensions.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/cohort_extensions.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/verify_closed_development_nuts.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/verify_closed_development_nuts.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/numerical_cohorts_portable.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/numerical_cohorts_portable.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/audit_new_sampler_capture.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/audit_new_sampler_capture.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/validate_bootstrap_solver.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/validate_bootstrap_solver.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/audit_corrected_scores.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/audit_corrected_scores.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/validate_unresolved_stage2_draws.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/validate_unresolved_stage2_draws.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/refit_cohorts_stage2_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/refit_cohorts_stage2_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/validate_stage2_solver.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/validate_stage2_solver.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/validate_score_auditor.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/validate_score_auditor.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/refit_cohorts.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/refit_cohorts.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/corrected_diagnostic_editorial.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/corrected_diagnostic_editorial.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/compare_refit_stages.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/compare_refit_stages.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/stable_reml_solver_stage2_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/stable_reml_solver_stage2_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/verify_refit_cohorts.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/verify_refit_cohorts.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/validate_score_auditor_v3.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/validate_score_auditor_v3.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/refit_cohorts_stage2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/refit_cohorts_stage2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/validate_score_auditor_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/validate_score_auditor_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/resolve_refit_stages.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/resolve_refit_stages.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/stable_reml_solver_stage2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/stable_reml_solver_stage2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/validate_stable_solver.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/validate_stable_solver.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/stable_reml_solver.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/stable_reml_solver.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/verify_corrected_fits.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/verify_corrected_fits.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/preparation_adapter_19d7a57c.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/preparation_adapter_19d7a57c.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/audit_corrected_scores_v2.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/audit_corrected_scores_v2.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/audit_corrected_scores_v3.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/audit_corrected_scores_v3.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/reml_correction/recalculate_corrected_results.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/reml_correction/recalculate_corrected_results.py",
+      "passed": true
+    },
+    {
+      "check": "original-source-identity revision_20261015/code/terminology_20261018/render_proposal_figures.py",
+      "passed": true
+    },
+    {
+      "check": "public-source-identity revision_20261015/code/terminology_20261018/render_proposal_figures.py",
+      "passed": true
+    },
+    {
+      "check": "37 original frozen statistical source kernels byte-identical",
+      "passed": true
+    },
+    {
+      "check": "core-model-kernel sikov_model.py",
+      "passed": true
+    },
+    {
+      "check": "core-model-kernel sikov_bootstrap.py",
+      "passed": true
+    },
+    {
+      "check": "core-model-kernel sikov_published_reference.py",
+      "passed": true
+    },
+    {
+      "check": "core-model-kernel sikov_published_fit.py",
+      "passed": true
+    },
+    {
+      "check": "ten extracted table helpers preserve original AST and omit all paper builders",
+      "passed": true
+    },
+    {
+      "check": "strict original frozen-input verification AST unchanged reproduction/real_worker.py",
+      "passed": true
+    },
+    {
+      "check": "external reference metadata and explicitly mapped source verification reproduction/real_worker.py",
+      "passed": true
+    },
+    {
+      "check": "strict original frozen-input verification AST unchanged reproduction/real_private_catalog.py",
+      "passed": true
+    },
+    {
+      "check": "external reference metadata and explicitly mapped source verification reproduction/real_private_catalog.py",
+      "passed": true
+    },
+    {
+      "check": "all five declared operational/path adaptations bind exact original and final public bytes",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "new_model_fits_executed": false,
+  "private_records_or_outcomes_read": false,
+  "original_authoritative_sources_modified": false,
+  "publication_performed_by_this_auditor": false,
+  "generated_performance_values_included_in_audit": false,
+  "numeric_table_parity_previously_independently_verified": true,
+  "limits": [
+    "Syntax, source identity and publication-content audit; full scientific runs are not repeated for this upload.",
+    "External official inputs and private reference archives are required for full data refitting."
+  ]
+}

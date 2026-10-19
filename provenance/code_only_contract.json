@@ -1,0 +1,192 @@
+{
+  "status": "PASS_CODE_ONLY_NUMERICAL_TABLE_CONTRACTS",
+  "created_utc": "2026-10-18T15:43:42.630126+00:00",
+  "source_release": "2026.10.18-reml-corrected",
+  "files": [
+    {
+      "path": "reproduction/article_coverage.py",
+      "original_sha256": "b16e8cffc3de390536980bfe8c16e198758d61344ebf71e087353a17457430da",
+      "published_sha256": "a1b978d287569bb9e7a8a5ad46062726c30a4567fc506b72255ff32dae69c13c",
+      "retained_original_AST_nodes": [
+        "LEGACY_LABELS",
+        "PHASE",
+        "SUPPLEMENT_IDS",
+        "load_report",
+        "main_inputs",
+        "main_tables",
+        "sha",
+        "supplement_tables"
+      ],
+      "removed_scope": "Word/XML readers, paper prose templates, narrative interpretation, document QA and CLI"
+    },
+    {
+      "path": "reproduction/current_revision_contract.py",
+      "original_sha256": "3c165c5d8640fdb43247d7fdcde92651693ce6219536c437a8cc943c7353c583",
+      "published_sha256": "52844ca34f84250fd3726b8817d21114c618c10e033a80855a08bc38bf8bb4c5",
+      "retained_original_AST_nodes": [
+        "CUT16",
+        "FIGURES",
+        "LEGACY_CSV",
+        "MAIN_CSV",
+        "MAIN_IDS",
+        "PHASE",
+        "SIKOV",
+        "formatting_manifest",
+        "functions",
+        "kernel_manifest",
+        "read",
+        "safe",
+        "sha"
+      ],
+      "adapted_functions": [
+        "derive"
+      ],
+      "adaptation_scope": "Keep exact original table computations; omit Word/XML reading, paper narratives and editorial verification; add input hashes and figure path metadata only",
+      "numerical_formulas_changed": false,
+      "formatted_table_values_changed": false
+    }
+  ],
+  "data_or_generated_results_copied": false,
+  "original_private_files_modified": false,
+  "full_article_supplement_cover_letter_included": false,
+  "validated_utc": "2026-10-18T15:44:29.380509+00:00",
+  "validation": {
+    "checks_passed": 29,
+    "checks": [
+      {
+        "check": "historical22tablematricesidentical",
+        "passed": true
+      },
+      {
+        "check": "historical22tables",
+        "passed": true
+      },
+      {
+        "check": "historical1488cells",
+        "passed": true
+      },
+      {
+        "check": "historicalnopapertext",
+        "passed": true
+      },
+      {
+        "check": "historicalinputhashes",
+        "passed": true
+      },
+      {
+        "check": "historicalfigurepathmetadata",
+        "passed": true
+      },
+      {
+        "check": "corrected22tablematricesidentical",
+        "passed": true
+      },
+      {
+        "check": "corrected22tables",
+        "passed": true
+      },
+      {
+        "check": "corrected1488cells",
+        "passed": true
+      },
+      {
+        "check": "correctednopapertext",
+        "passed": true
+      },
+      {
+        "check": "correctedinputhashes",
+        "passed": true
+      },
+      {
+        "check": "correctedfigurepathmetadata",
+        "passed": true
+      },
+      {
+        "check": "reproduction/article_coverage.py originalAST load_report",
+        "passed": true
+      },
+      {
+        "check": "reproduction/article_coverage.py originalAST main_inputs",
+        "passed": true
+      },
+      {
+        "check": "reproduction/article_coverage.py originalAST main_tables",
+        "passed": true
+      },
+      {
+        "check": "reproduction/article_coverage.py originalAST sha",
+        "passed": true
+      },
+      {
+        "check": "reproduction/article_coverage.py originalAST supplement_tables",
+        "passed": true
+      },
+      {
+        "check": "reproduction/article_coverage.py noWordimport",
+        "passed": true
+      },
+      {
+        "check": "reproduction/article_coverage.py originalunchanged",
+        "passed": true
+      },
+      {
+        "check": "reproduction/article_coverage.py publishedunchanged",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py originalAST formatting_manifest",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py originalAST functions",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py originalAST kernel_manifest",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py originalAST read",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py originalAST safe",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py originalAST sha",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py noWordimport",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py originalunchanged",
+        "passed": true
+      },
+      {
+        "check": "reproduction/current_revision_contract.py publishedunchanged",
+        "passed": true
+      }
+    ],
+    "aggregate_matrix_parity": {
+      "historical": {
+        "tables": 22,
+        "cells": 1488,
+        "input_hash_count": 22,
+        "figure_paths": 7
+      },
+      "corrected": {
+        "tables": 22,
+        "cells": 1488,
+        "input_hash_count": 22,
+        "figure_paths": 7
+      }
+    },
+    "data_inputs_read_only_from_external_local_source": true,
+    "table_rows_or_figure_data_in_receipt": false,
+    "legacy_compare_dependency_sha256": "de6723a169447386529695d1d44c07664ff30237a1c6592c4ea1d9f556031be9",
+    "legacy_compare_dependency_loaded_for_validation": "Original unchanged appendix_tables implementation; published dependency must preserve same function AST"
+  }
+}

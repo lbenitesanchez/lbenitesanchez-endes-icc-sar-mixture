@@ -1,0 +1,48 @@
+{
+  "id": "incremental_icc_exploratory_20261015_v1",
+  "registered_utc": "2026-10-15T12:45:23.417402+00:00",
+  "status": "EXPLORATORY_REGISTERED_BEFORE_NEW_SCORING",
+  "scope": "Selected frozen 75% ICC / 25% full-graph SAR versus ICC-only on the SAME existing 256 fresh evaluation populations. No fitting or reselection.",
+  "designation": "All new Selected-versus-ICC analyses are exploratory and descriptive. Original Holm3 and Holm12 families remain unchanged.",
+  "units": "Population is the Monte Carlo unit. Four contexts have equal weights; endpoints and eligible districts are averaged within each population. Paired Selected-minus-ICC differences preserve within-population dependence.",
+  "subgroups": [
+    "global (equal four-context weight)",
+    "context",
+    "endpoint",
+    "mask all / finite observed endpoint / absent from common sampled district set",
+    "context by endpoint by mask and endpoint/mask balanced summaries"
+  ],
+  "metrics": [
+    "IS95: width + 40*(lower-truth) if truth<lower + 40*(truth-upper) if truth>upper",
+    "MSE and RMSE sqrt(mean district squared error), with sqrt(mean population MSE) distinguished from mean population RMSE",
+    "signed bias",
+    "coverage",
+    "width",
+    "absolute distance of aggregate coverage from 0.95"
+  ],
+  "absolute_and_relative": "Absolute selected-minus-ICC differences and relative difference 100*(selected/ICC-1) where ICC !=0, signed-bias ratios omitted when denominator small or meaning ambiguous. RMSE ratios use same aggregation definition.",
+  "mcse": "Within context s(population statistic)/sqrt(n). Across contexts sqrt(sum_h s_h^2/n_h)/H for fixed equal context weights H. Nonlinear sqrtmeanMSE, ratio, relative difference and aggregate distance95 use paired population delta influence values, centered within context. For zero or undefined denominators output null.",
+  "intervals": "Descriptive 95% intervals estimate +/-1.96*MCSE; not simultaneous, no new p values or Holm changes, and not prevalence intervals. Coverage-distance non-differentiability at95 is explicitly flagged; report coverage intervals and interval-induced distance bounds too.",
+  "figure": "English scientific static point and whisker figure of Selected-minus-ICC IS95 and RMSE across contexts and global; descriptive95MonteCarlo intervals.",
+  "development_audit": "Recover all original 32 Laplace-development populations, candidate weight grid scores, best-versus-second margins and leave-one-population-out selections/margins without changing chosen weight. Prepare NUTS development replay inputs/commands only, and state approximation/integration mismatch clearly.",
+  "original_families_audit": "Read original Holm3/Holm12 score scripts and stored outputs; identify population/province units, variance/MCSE formulas and reference distributions without changing results.",
+  "prohibited": [
+    "No model fits / NUTS / optimization launched by this agent",
+    "No original source or results modified",
+    "No DOCX changes",
+    "No publication or external writes"
+  ],
+  "input_roots": [
+    "PRIVATE_RUN_ROOT",
+    "IAOS_revision_2026-10-15/src",
+    "IAOS_revision_2026-10-15/results_fresh"
+  ],
+  "public_copy_provenance": {
+    "original_registration_sha256": "aad2f36778f51c0d247a6cd2543639a1a28552211c0b6ba9112f79eb6acf9bec",
+    "scientific_protocol_changed": false,
+    "sanitized_fields": [
+      "/input_roots/0"
+    ],
+    "rule": "Only machine-specific input-root path values replaced with PRIVATE_RUN_ROOT; original registration remains preserved privately and its digest is retained."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "version": "legacy-dgp-orientation-v2-2026-10-13",
+  "classification": "INPUT_GENERATION_CORRECTION",
+  "purpose": "Make the previously unspecified eigenvector orientation explicit and recover historically seeded populations from fresh original geometry.",
+  "X_shape": [
+    80,
+    3
+  ],
+  "coordinates_shape": [
+    80,
+    2
+  ],
+  "basis_shape": [
+    80,
+    12
+  ],
+  "X_sha256": "ee4503a73bb43031c8e0eed8fcc36d0703e12b8ee4b9bd23f163e7dfa4a81fa5",
+  "coordinates_sha256": "205c53736e363c427af6b195630cdb8e201f1a4d93e2248b1432dcbca900e0cc",
+  "DGP_RBF_K_sha256": "34d9c651e29b19ee72abaf6ec0edeff992f4968538fc82a9ab1a0f28716684ad",
+  "original_finite_generator_sha256": "565cd69db1d14d05e76a87e5bac86fe0f46cc196f25ce938cbfb15b39d754cc3",
+  "anchors": [
+    {
+      "column": 0,
+      "row": 56,
+      "desired_sign": -1,
+      "minimum_required_absolute_anchor": 0.3712309076110236
+    },
+    {
+      "column": 1,
+      "row": 20,
+      "desired_sign": 1,
+      "minimum_required_absolute_anchor": 0.37352009689382093
+    },
+    {
+      "column": 2,
+      "row": 16,
+      "desired_sign": -1,
+      "minimum_required_absolute_anchor": 0.3055485331006284
+    },
+    {
+      "column": 3,
+      "row": 40,
+      "desired_sign": -1,
+      "minimum_required_absolute_anchor": 0.4139500992668696
+    },
+    {
+      "column": 4,
+      "row": 36,
+      "desired_sign": -1,
+      "minimum_required_absolute_anchor": 0.27644622463992957
+    },
+    {
+      "column": 5,
+      "row": 8,
+      "desired_sign": 1,
+      "minimum_required_absolute_anchor": 0.2749245658714789
+    },
+    {
+      "column": 6,
+      "row": 0,
+      "desired_sign": 1,
+      "minimum_required_absolute_anchor": 0.26687467795184733
+    },
+    {
+      "column": 7,
+      "row": 48,
+      "desired_sign": -1,
+      "minimum_required_absolute_anchor": 0.18163964473825142
+    },
+    {
+      "column": 8,
+      "row": 50,
+      "desired_sign": -1,
+      "minimum_required_absolute_anchor": 0.19232555612849883
+    },
+    {
+      "column": 9,
+      "row": 72,
+      "desired_sign": 1,
+      "minimum_required_absolute_anchor": 0.2078771791720657
+    },
+    {
+      "column": 10,
+      "row": 26,
+      "desired_sign": 1,
+      "minimum_required_absolute_anchor": 0.15251522281286797
+    },
+    {
+      "column": 11,
+      "row": 79,
+      "desired_sign": -1,
+      "minimum_required_absolute_anchor": 0.15811992800343577
+    }
+  ],
+  "anchor_indexing": "zero based; immutable distinct row per column; no maximum search during production",
+  "anchor_provenance": "Chosen once from the archived generating geometry alone during the diagnostic cause investigation. No responses, truth or fit outputs used to choose the rule.",
+  "diagnostic_archive_geometry_sha256": "c0901e1561279171d8d40b0448caf7f3c2c6bde8fa60cb8a866c943edb94934a",
+  "production_reads_archive_geometry_arrays": false,
+  "Gaussian_field_Gram_tolerance": 1e-12,
+  "distribution_models_seeds_sampler_settings_and_diagnostic_gates_preserved": true,
+  "bitwise_original_input_generator_unchanged_claimed": false
+}

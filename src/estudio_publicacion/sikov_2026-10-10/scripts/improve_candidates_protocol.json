@@ -1,0 +1,40 @@
+{
+  "phase": "candidate_definition_before_new_development_results",
+  "date_Lima": "2026-10-10",
+  "conceptual_candidate_classes": ["ICC", "ICC_poverty", "ICC_SAR_mixture"],
+  "finite_candidate_recipes": {
+    "ICC": {"family": "ICC", "stratum_deviations": false},
+    "ICC_poverty": {
+      "family": "ICC",
+      "stratum_deviations": true,
+      "stratum_deviation_sd": 0.75,
+      "coding": "Two orthonormal Helmert contrasts, applied to every common area covariate including intercept; deviation columns multiplied by 0.75/2.5",
+      "priors": "Existing ICC global intercept SD5, global slope SD2.5; contrast-coefficient SD0.75; no changed spatial/kappa prior",
+      "poor_stratum_information": "Partial pooling remains defined even when a stratum has few sampled areas"
+    },
+    "ICC_SAR_w25": {"family": "ICC_SAR_mixture", "icc_weight": 0.25},
+    "ICC_SAR_w50": {"family": "ICC_SAR_mixture", "icc_weight": 0.5},
+    "ICC_SAR_w75": {"family": "ICC_SAR_mixture", "icc_weight": 0.75}
+  },
+  "same_information": "All methods receive the same 14 article auxiliaries, fixed poverty labels, coordinates/neighbor graph, observed survey sample and sampling design; only the prespecified mathematical representation differs",
+  "poverty_requirement": "Actual auxiliary poverty at the article cutpoints30/55; no arbitrary transform of old synthetic X1 into poverty",
+  "mixture": {
+    "CDF": "w*empiricalCDF(ICC marginal conditional-beta draws)+(1-w)*NormalCDF(SAR mean,SAR MSE)",
+    "point_estimate": "w*ICC posterior mean+(1-w)*SAR mean",
+    "uncertainty": "Untruncated mixture-law 2.5/97.5percentiles; no exact design-coverage guarantee",
+    "between_component_disagreement": true,
+    "averaged_interval_endpoints": false,
+    "saved_quantile_reconstruction": "Forbidden; actual posterior marginal draws required",
+    "joint_endpoints": "No joint endpoint law is asserted"
+  },
+  "development_selection": {
+    "primary_criterion": "IS95 averaged equally over contexts and endpoints, all same target areas",
+    "tie_breaks": ["balanced RMSE", "method name"],
+    "population_holdout_audit": "For each development world, choose recipe from all other worlds and score both endpoints of held-out world",
+    "mixture_weight": "One globally selected fixed weight; no per-endpoint or per-final-population optimization",
+    "interval_multiplier_search": false,
+    "CUT8": "Excluded from candidate family following previously adverse validation",
+    "roles": "Development approximation must be labelled; fresh evaluation uses original HMC gates and no recipe changes"
+  },
+  "scientific_claim": "Candidate definition and numerical QA do not establish superiority; a separately frozen fresh comparison is required"
+}

@@ -1,0 +1,35 @@
+argv<-commandArgs(trailingOnly=FALSE);self<-sub("^--file=","",argv[grepl("^--file=",argv)])
+study<-normalizePath(file.path(dirname(self),"../.."))
+.libPaths(c(file.path(study,".Rlib"),.libPaths()))
+library(Matrix);library(survey)
+source(file.path(study,"scripts/competitors/gao_stage1.R"))
+source(file.path(study,"scripts/competitors/gao_stage2.R"))
+author<-new.env(parent=globalenv())
+source(file.path(study,"fuentes/competidores/gao_wakefield/author_code/analysis/models.R"),local=author)
+inp<-readRDS(file.path(study,"datos/private_competitors/private_inputs_2025.rds"))
+s<-inp$child;s$area<-s$ubigeo;f<-inp$household;f$area<-f$ubigeo
+p<-inp$area_aux;p$area<-p$ubigeo;p$population_weight<-1
+features<-c("altitude","poverty","illiteracy","electricity","spanish","biomass")
+for(x in features) s[[x]]<-s[[paste0("aux_",x)]]
+z<-gao_stage1(s,p,f,"y_anemia_who2024",features)
+cols<-c("area","weight","psu","stratum","y_anemia_who2024",features)
+dat<-s[cols];dat$is_child<-TRUE
+phantom<-as.data.frame(matrix(NA_real_,nrow(f),ncol(dat)));names(phantom)<-names(dat)
+phantom$area<-as.character(f$area);phantom$weight<-f$weight
+phantom$psu<-f$psu;phantom$stratum<-f$stratum;phantom$is_child<-FALSE
+dat<-rbind(dat,phantom)
+des<-svydesign(ids=~psu,strata=~stratum,weights=~weight,data=dat,nest=TRUE)
+des<-subset(des,is_child&!is.na(y_anemia_who2024))
+published<-author$get_greg(z$fit,reformulate(features,response="y_anemia_who2024"),
+                         ~area,p,des,pop=~population_weight,CI=.95)
+j<-match(z$estimates$area,published$region);ok<-is.finite(z$estimates$est)&!is.na(j)
+validation<-list(author_commit="29a89ec264d41b1638780db7689bfe43f609fc1e",
+  comparison="Executed pinned author's get_greg function on full-frame ENDES2025 anemia survey design",
+  n_areas=sum(ok),max_est_difference=max(abs(z$estimates$est[ok]-published$est[j[ok]])),
+  max_var_difference=max(abs(z$estimates$var[ok]-published$var[j[ok]])),
+  stage1_pass=FALSE)
+validation$stage1_pass<-validation$max_est_difference<1e-12&&validation$max_var_difference<1e-12
+stopifnot(validation$stage1_pass)
+jsonlite::write_json(validation,file.path(study,"resultados/competidores_gao/author_stage1_validation.json"),
+  pretty=TRUE,auto_unbox=TRUE,digits=16)
+print(validation)

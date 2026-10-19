@@ -1,0 +1,31 @@
+{
+  "registered_utc": "2026-10-18T13:03:31.266326+00:00",
+  "role": "Retrospective numerical audit, registered after original case/score inspection and independent objective diagnosis, before repaired bootstrap and prediction scoring; not original prespecification",
+  "two_failure_cases": [
+    [
+      "IID_logit_psu_sparse",
+      50026
+    ],
+    [
+      "SAR_probability_srs",
+      50057
+    ]
+  ],
+  "target": "Observed-domain SAR stunting poverty stratum1",
+  "fitting_truth_access": false,
+  "model_graph_regressors_priors_data_bounds_changed": false,
+  "rho_bound": 0.999,
+  "original_KKT_tolerance": 1e-05,
+  "repair_rule": "Use independently obtained same-objective residual-contrast profile optimum, verify unchanged original KKT certificate. Re-evaluate original prediction algebra at that fixed optimum, rerun original B100 bootstrap with identical seeds and unmodified bootstrap optimizer/95percent rule. No tuning by accuracy.",
+  "bootstrap_B": 100,
+  "bootstrap_minimum_success_fraction": 0.95,
+  "prediction_scoring": "Seal every repaired prediction and status before any repaired truth scoring. Compare all256 original populations with only these two reference predictions replaced; retain all cases, original proposed mixture, ICC, fullSAR, weights and Holm families. Leave-two-out is diagnostic only, never primary.",
+  "additional_discovery": "Audit success-flag-true but KKT-false central fits as a separate numerical concern. Do not claim global article robustness from the two-case repair if this broader concern is material.",
+  "original_public_records_sha256": "9f2794906a2ac14900320ac19d6082400a02cb9ecc8b6d2483f610a5131d721c",
+  "source_optimizers_sha256": {
+    "sikov_model.py": "81fab848a488d11c9c1b63541a0732d96bfbb62043ac1e388b03cd135b4606a9",
+    "sikov_bootstrap.py": "591ce36a649ca88f3fd39e28518184f089c6561c284b8d901928fff31d58e99c",
+    "sikov_published_reference.py": "573a884bdaee00069e17e0d1fb7a8863a50d282f95e1dee6f64759d4305db4a3"
+  },
+  "originals_overwritten": false
+}

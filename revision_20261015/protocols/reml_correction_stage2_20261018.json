@@ -1,0 +1,18 @@
+{
+  "registered_utc": "2026-10-18T13:54:52.619458+00:00",
+  "role": "Fitting-only second rescue stage added after stage1 numerical diagnostics and before any corrected evaluation scoring. No change of models or inferential families; not original preregistration.",
+  "base_protocol_sha256": "d417213588b4e87d1c3f8c98a8639912cb3fc3f321315e50841fca01eb9529d9",
+  "stage1_solver_sha256": "cfd591cdfa2797dbb0b8b20f4a6fe2af7f21c52c9c83b782ded2df43efa52b6c",
+  "reason": "A small number of fixed bootstrap draws remain nonstationary because the profiled rho score is flat on a variance-zero branch at a broad bracket endpoint; a local score-root bracket recovers a stricter solution. Native successes and all original failures remain recorded.",
+  "eligibility": "Every completed stage1 job with any final central certificate failure, any final stable certificate failure or any rejected bootstrap draw; eligibility uses numerical diagnostics only, never evaluation outcomes.",
+  "stage2_rule": "Retain the frozen stage1 solver. In a new module, add deterministic local rho-profile score-root brackets and refinement when the stage1 final candidate still fails either equivalent projected-score certificate. Reuse unchanged stage1 fits whenever both certificates pass. No gate/tolerance relaxation.",
+  "data_graph_design_bounds_weights_B_seeds_changed": false,
+  "tolerance": 1e-05,
+  "bootstrap_min_success_fraction": 0.95,
+  "no_new_random_streams_or_rerolled_rejected_draws": true,
+  "output_policy": "Keep stage1 outputs and rejected-draw diagnostics intact. Write stage2 affected jobs separately with source/version/seed/input/output receipts. Final consolidated prediction lock explicitly records the source stage of every method job; no silent source mixing.",
+  "completion_policy": "Attempt rescue of every eligible case even if the stage1 method already meets the 95 percent original bootstrap acceptance fraction. Any mathematically unresolved draw remains explicit and is never labeled certified.",
+  "fitting_truth_read": false,
+  "new_accuracy_scores_read_before_registration": false,
+  "stage2_source_binding": "Frozen stage2 implementation hash and its validation receipts are recorded in the stage2 dispatch manifest before production execution."
+}

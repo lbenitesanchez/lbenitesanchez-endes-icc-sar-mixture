@@ -1,0 +1,51 @@
+{
+  "registered_utc": "2026-10-18T13:38:21.698677+00:00",
+  "role": "Retrospective numerical correction authorized after diagnostic and baseline outcome inspection; registered before corrected full bootstrap and corrected outcome scoring; not original preregistration",
+  "user_authorization": "Correct all affected REML and bootstrap fits with the same models and seeds; recalculate results and update article, supplement and reproducible code before GitHub release.",
+  "fitting_truth_access": false,
+  "scoring_lock": "Seal all corrected predictions, source digests, input digests, job seeds, status and individual draw diagnostics before any corrected scoring. Unchanged original ICC draws may be reused only with identity checks.",
+  "preserved_scientific_choices": {
+    "model_families": "Exact original Sikov FH/full-domain SAR/observed-domain SAR and graph variants; no likelihood, design, graph, bounds or sampling-variance change",
+    "rho_bound": 0.999,
+    "scaled_A_bounds": [
+      0,
+      100
+    ],
+    "projected_score_tolerance": 1e-05,
+    "data_covariates_masks_and_strata": "unchanged per original input hash",
+    "bootstrap_B_and_interval_estimator": "unchanged per original model/job receipt: B100 primary, B300 sensitivity, original naive/BC shared draws, original delta-only graph variants",
+    "bootstrap_minimum_success_fraction": 0.95,
+    "RNG": "Original derived seed and generator draw order, per job and endpoint; preserve common standard normal innovations after corrected central fit",
+    "ICC_and_NUTS": "Reuse original verified fits/draws, no new ICC sampling required by this numerical correction",
+    "mixture": "Proposed mixture: 75% ICC beta + 25% full-domain SAR; fixed weights, no retuning on evaluation data",
+    "populations": "Preserve every planned population and original context weights; no exclusions by predictive performance",
+    "inference": "Preserve original Holm3/Holm12 families; all revision and numerical-correction analyses identified separately"
+  },
+  "numerical_policy": {
+    "native_success_is_not_certificate": true,
+    "reuse_certified_historical_parameter_solutions": true,
+    "rescue_rule": "Deterministic same-likelihood stable residual-contrast optimization/profile for any central or bootstrap point failing projected-score certificate, including native-success cases; retain native status, original formula score, stable equivalent score, rescue steps and per-draw acceptance separately",
+    "failure_rule": "Never fabricate success or relax score tolerance; retain unresolved fits and fail job if fewer than original minimum accepted bootstrap draws; unresolved central fits require explicit review before promotion",
+    "selection": "Select solutions by fitting objective and numerical validity, never by evaluation accuracy",
+    "recompute": "Repeat affected bootstrap using identical seeds and original draw schedule; recalculate mixtures, summaries, MCSE, multiplicity, figures, real-data assessments and development weight sensitivity from sealed corrected predictions"
+  },
+  "cohort_scope": [
+    "development32 and its NUTS sensitivity reuse",
+    "principal256 and graph/distance variants",
+    "sparse57 new256",
+    "observed-domain generating graph64 and variants",
+    "B300 eight-population subset",
+    "real temporal and territorial assessments and variants"
+  ],
+  "historical_boundary": "Legacy800 uses a distinct multivariate Gaussian implementation; audit applicability separately and never describe unavailable legacy certificates as passed. CUT40 is ICC/CUT NUTS, not this native Sikov REML fitter.",
+  "original_sources_sha256": {
+    "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_model.py": "81fab848a488d11c9c1b63541a0732d96bfbb62043ac1e388b03cd135b4606a9",
+    "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_bootstrap.py": "591ce36a649ca88f3fd39e28518184f089c6561c284b8d901928fff31d58e99c",
+    "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_reference.py": "573a884bdaee00069e17e0d1fb7a8863a50d282f95e1dee6f64759d4305db4a3",
+    "src/estudio_publicacion/sikov_2026-10-10/scripts/sikov_published_fit.py": "3e0e55252ca789c292b890cf8025de6b450e83fe608fad9f34a9eda2ce5adc43"
+  },
+  "baseline_snapshot_manifest_sha256": "64ad6f70880c2bccb3ffb6d66cce5471aff1fc66d981976679b176641f9e36eb",
+  "private_output_root": "iaos_reml_correction_2026-10-18",
+  "canonical_outputs_not_promoted_until": "All jobs locked, strict numerical audit and independent corrected scoring complete; documents rebuilt and every rendered page inspected; package public-only audit passed.",
+  "external_actions": "No GitHub publication or journal submission in this correction task."
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "raw file identities only; no records or responses published",
+  "source": "https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2089/informacion_complementaria.zip",
+  "files": {
+    "datos/raw/ENDES2025/Base_Datos/RECH0_2025.SAV": {
+      "bytes": 7242874,
+      "sha256": "a0364260450a7b008a5e08ee5a47e6e95b2597c42d4e95de7e92c4003ac96939"
+    },
+    "datos/raw/ENDES2025/Base_Datos/RECH1_2025.SAV": {
+      "bytes": 10714891,
+      "sha256": "e881857b51d613325703199fbdae1b6bb8a9d5a265a45ef3570823585dfc22ca"
+    },
+    "datos/raw/ENDES2025/Base_Datos/RECH6_2025.SAV": {
+      "bytes": 3290935,
+      "sha256": "bae7ddb04c96a638d46dc2dc75d812ffb8e9afbde584ca20f64965c3791503de"
+    }
+  }
+}

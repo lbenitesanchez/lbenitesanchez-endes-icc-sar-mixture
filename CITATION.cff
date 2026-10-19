@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this scientific code release."
+type: software
+title: "ENDES ICC SAR mixture scientific code"
+version: "2026.10.18-code-only"
+repository-code: "https://github.com/lbenitesanchez/lbenitesanchez-endes-icc-sar-mixture"
+authors:
+  - family-names: Benites
+    given-names: Luis
+    affiliation: "Universidad del Pacifico, Peru"
+    orcid: "https://orcid.org/0000-0001-5998-7098"
+  - family-names: Maehara
+    given-names: Rocio
+    affiliation: "Universidad del Pacifico, Peru"
+    orcid: "https://orcid.org/0000-0003-2621-2602"
+  - family-names: Aybar-Flores
+    given-names: Alejandro
+    affiliation: "Universidad del Pacifico, Peru"
+    orcid: "https://orcid.org/0000-0001-7080-3325"

@@ -1,0 +1,225 @@
+{
+  "status": "FROZEN_PROSPECTIVE_DESCRIPTIVE_SENSITIVITY",
+  "frozen_utc": "2026-10-10T22:03:10.253311+00:00",
+  "protocol_sha256": "45563a28075d39059f3e565957b5625b6e9b4bfe463f90f2130a8572419ce4f0",
+  "addendum_sha256": "7822176f48357b1ee9bf0a926fa44b74bafd3fc9c481a1ece878a8d5bd3b4427",
+  "context": "SAR_probability_sampled_graph_srs",
+  "replications": [
+    30000,
+    30001,
+    30002,
+    30003,
+    30004,
+    30005,
+    30006,
+    30007,
+    30008,
+    30009,
+    30010,
+    30011,
+    30012,
+    30013,
+    30014,
+    30015,
+    30016,
+    30017,
+    30018,
+    30019,
+    30020,
+    30021,
+    30022,
+    30023,
+    30024,
+    30025,
+    30026,
+    30027,
+    30028,
+    30029,
+    30030,
+    30031,
+    30032,
+    30033,
+    30034,
+    30035,
+    30036,
+    30037,
+    30038,
+    30039,
+    30040,
+    30041,
+    30042,
+    30043,
+    30044,
+    30045,
+    30046,
+    30047,
+    30048,
+    30049,
+    30050,
+    30051,
+    30052,
+    30053,
+    30054,
+    30055,
+    30056,
+    30057,
+    30058,
+    30059,
+    30060,
+    30061,
+    30062,
+    30063
+  ],
+  "worlds": 64,
+  "methods": [
+    "Sikov_FH",
+    "Sikov_SAR",
+    "Sikov_FH_BC",
+    "Sikov_SAR_BC",
+    "Sikov_SAR_k4",
+    "Sikov_SAR_k8",
+    "Sikov_SAR_haversine",
+    "ICC",
+    "Selected",
+    "Sikov_SAR_Published",
+    "Sikov_SAR_Published_BC"
+  ],
+  "sources_sha256": {
+    "scripts/sensitivity_sampled_graph_generate.py": "cb9f0a85ebdc074a5b769207eadbd4e3c5e7c4c9d7cd8fe36e05199d9df7d845",
+    "scripts/sensitivity_sampled_graph_fit.py": "ef0c77eaaacd1114e71835f094f42949af60a78396a720a52259903f239ebf2a",
+    "scripts/sensitivity_sampled_graph_audit.py": "d5492b7fa720780848ddeca0c5f551ad6a24770a2ffb4252f8c1738b083ce3d4",
+    "scripts/sensitivity_sampled_graph_score.py": "0ead98aefc208d45cb96e83092f05c527b75fbd6eb9ac45645be7cf4b096cf84",
+    "scripts/sensitivity_sampled_graph_qa.py": "821f6698f744244e5149fc5af9dd81bf03083383cee1fdf06e3656013572e6ff"
+  },
+  "inputs_sha256": {
+    "datos/simulation_template/auxiliary.npz": "3cb0547c1050370d725a1abfc487acf8b4852f7903c00b552507e0a230b5c869",
+    "datos/simulation_template/manifest.json": "7d4b04c58edfd9c5d117c4a4f6b9ad3f447192139b803d6c2fc3e031ed66a9f8",
+    "datos/simulation_template/area_ids.csv": "a6ba9344a96265a65175af41c764c9c2a1c476fdef22ccc27b1029f9f4fcab2f"
+  },
+  "prefit_QA_path": "validacion/sensitivity_sampled_graph_prefit_QA.json",
+  "prefit_QA_sha256": "80075eb4338dcac1ee88da727d6e0238b86b03d6d933fff7db5373cbed00b3d5",
+  "accuracy_or_truth_read_before_freeze": false,
+  "original_37_sources_256_worlds_and_Holm3_Holm12_unchanged": true,
+  "main_primary_family_membership": false,
+  "formal_p_values_or_new_Holm_family": false,
+  "no_recipe_or_model_selection_on_supplemental_results": true,
+  "selected_recipe": {
+    "family": "ICC_SAR_mixture",
+    "icc_weight": 0.75
+  },
+  "streams": {
+    "population": [
+      20261010,
+      971,
+      "replication"
+    ],
+    "sampling": [
+      20261010,
+      972,
+      "replication"
+    ],
+    "original_fits": [
+      20261010,
+      973,
+      "replication"
+    ],
+    "published_bootstrap": [
+      20261010,
+      974,
+      "replication"
+    ]
+  },
+  "frame": {
+    "areas": 120,
+    "raw_covariates_plus_intercept": 15,
+    "strata": 3,
+    "stratum_areas": 40,
+    "sampled_stratum_areas": 32,
+    "sampled_areas": 96,
+    "non_sampled_areas": 24,
+    "ICC_basis_rank": 18
+  },
+  "population_and_design": {
+    "rho": 0.6,
+    "graph_neighbors": 6,
+    "graph": "W11 sampled-only within-stratum k6; W10 zero; W01/W00 from full-frame within-stratum k6",
+    "graph_defined_before_population_outcomes": true,
+    "gaussian_innovation_endpoint_correlation": 0.4,
+    "same_global_mean_squared_row_norm_as_original_generator": true,
+    "printed_Sikov_coefficients_unchanged": true,
+    "base_risk_clip": [
+      0.03,
+      0.75
+    ],
+    "probability_clip": [
+      0.005,
+      0.9
+    ],
+    "spatial_scales": [
+      0.07,
+      0.05
+    ],
+    "population_PSUs_per_area": 60,
+    "children_per_PSU": 24,
+    "sampled_PSUs_per_area": 6,
+    "child_sampling_probability": [
+      0.4,
+      0.8
+    ],
+    "endpoint_child_availability": [
+      0.85,
+      0.9
+    ],
+    "child_availability_is_not_domain_deletion": true,
+    "each_endpoint_requires_96_finite_y_and_positive_finite_D_before_fit": true,
+    "missing_support_is_blocking_no_resampling_or_exclusion": true,
+    "same_frozen_Taylor_GVF_Kish_inputs_and_weights": true,
+    "same_full_W_supplied_to_all_estimator_inputs": true
+  },
+  "numerical_fits": {
+    "kernels": "Unchanged comparison_evaluate.fits and sikov_published_fit.fit_arrays",
+    "bootstrap_primary_B": 100,
+    "native_naive_and_BC_same_innovations": true,
+    "NUTS": "Unchanged 4 serial chains, 1000 warmup+1000 retained per chain; predetermined 2000/2000 retry; all frozen Rhat/ESS/BFMI/divergence/depth/shape gates",
+    "finite_failed_numeric_worlds_retained_without_selection": true,
+    "initial_max_operational_workers": 2,
+    "max_operational_workers_after_original_256_fit_closures": 4,
+    "worker_expansion_uses_closure_metadata_only_never_accuracy": true
+  },
+  "evaluation": {
+    "groups": [
+      "all",
+      "observed_endpoint",
+      "unsampled_common"
+    ],
+    "criteria": [
+      "RMSE",
+      "MSE",
+      "MAE",
+      "bias",
+      "coverage95",
+      "width95",
+      "interval_score95"
+    ],
+    "balanced_endpoints_equal_weight_with_paired_world_MCSE": true,
+    "shared_0_1_projection_secondary_all_11_methods": true,
+    "Monte_Carlo_intervals_descriptive_unadjusted": true,
+    "RMSE_ratio_MCSE_scale": "mcse is delta-method SE of RMSE ratio; mcse_log_ratio is SE of log ratio used for the exponentiated MC interval",
+    "RMSE_ratio_zero_MSE_policy": "If either mean MSE is zero, retain the contrast row with estimate_defined false, explicit undefined_reason, and no ratio/SE/CI; never exclude the world or invent 0/0",
+    "first_truth_read_requires": [
+      "all_64_supplemental_predictions_sealed",
+      "independent_supplemental_prediction_audit_PASS",
+      "principal_JOINT_prediction_lock_valid",
+      "principal_independent_audit_PASS_COMPLETE_COMPARISON_INDEPENDENT_AUDIT"
+    ]
+  },
+  "scope_limits": [
+    "The original 2023 neighbor rule, poverty vector and non-sampled implementation remain unidentified; this is not exact original numeric replication.",
+    "The declared directed extension comes from the authors 2024 preprint; the 2023 observed SAR covariance is reconstructed on a specified k6 graph.",
+    "The latent Gaussian observed covariance exactly matches C_D up to the shared global variance normalization when both endpoint masks retain the 96 sampled domains.",
+    "The generative spatial graph conditions the population mechanism on the predetermined sampled-domain set; it is a comparator-favourable conditional sensitivity rather than a sampling-independent population model.",
+    "Probability clipping, binomial finite populations and GVF-stabilized design variances make Gaussian FH an approximate working model even in this favourable spatial mechanism.",
+    "This sensitivity may improve or weaken the fixed candidate; it is not a fifth primary context, a formal additional superiority test, or a new selection dataset.",
+    "ICC and design/GVF inputs remain working quantities fixed during NUTS; complete survey uncertainty propagation is not claimed."
+  ]
+}

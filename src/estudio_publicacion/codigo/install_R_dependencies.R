@@ -1,0 +1,7 @@
+fullargs <- commandArgs(trailingOnly=FALSE)
+this_file <- sub('^--file=', '', fullargs[grepl('^--file=',fullargs)][1])
+root <- normalizePath(file.path(dirname(this_file),'..'),mustWork=TRUE)
+rlib <- Sys.getenv('ENDES_R_LIB',file.path(root,'.Rlib'))
+dir.create(rlib,recursive=TRUE,showWarnings=FALSE)
+install.packages(c('haven','survey'),repos='https://cloud.r-project.org',lib=rlib)
+cat('Installed optional raw-reconstruction dependencies in the local R library.\n')
