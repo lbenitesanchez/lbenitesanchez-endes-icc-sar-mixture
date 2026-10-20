@@ -1,0 +1,8 @@
+﻿Cohort,Central fits,Central rescued,Bootstrap draws,Bootstrap rescued,Bootstrap rejected
+Development 32,384,6,38400,1006,0
+Principal256,9216,188,460800,13077,0
+NewSparse256,4608,76,460800,14036,0
+Graph64,2304,144,115200,7748,0
+B300 subset of 8,96,3,28800,1085,0
+Real temporal,36,7,1800,318,0
+Real territorial,36,8,1800,188,0

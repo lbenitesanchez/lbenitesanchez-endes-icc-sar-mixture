@@ -1,0 +1,758 @@
+{
+  "format": "iaos-reviewed-public-inputs-v1",
+  "created_utc": "2026-10-20T00:07:26.967412+00:00",
+  "scope": "Exactly 35 approved reproduction CSVs, copied without numerical changes. Original survey microdata and submission documents remain excluded.",
+  "user_authorized_publication": true,
+  "files": 35,
+  "bytes": 6420838,
+  "data_rows": 36430,
+  "input_contract_sha256": "e4ec345a5a55c4f4a0d1fcead5193f6fbbcbbb319dc33752ed508e2b4deb09b6",
+  "review": {
+    "all_registered_file_hashes_verified": true,
+    "all_rows_and_columns_inspected": true,
+    "personal_or_household_microdata_detected": false,
+    "person_identifiers_contact_details_or_credentials_detected": false,
+    "district_geography": "Official district-capital coordinates, not respondent GPS",
+    "district_health_values": "Model-based district estimates and intervals, not individual survey responses or empirical direct estimates",
+    "district_observation_flags": "Availability of district-level fitting estimates, without respondent counts",
+    "redistribution_blocker_identified": false,
+    "private_privacy_audit_sha256": "fc645c6e7920cc256ae2179ef0fc39add269502677c634ee104a330c6e432829",
+    "private_origin_audit_sha256": "2781c56270d3287b9badbee3679394ece6cf20a4d75c67813a6d21ee5d6867ba",
+    "limitations": "Content and provenance review of these frozen CSVs; no claim that all original data or future CSVs are suitable for publication."
+  },
+  "source_attribution": {
+    "institution": "Instituto Nacional de Estadística e Informática (INEI), Peru",
+    "district_directory": "https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1653/Libro.pdf",
+    "directory_sha256": "8efc00e4fe3fd14c497ac541eca20fe34801d847d6e29de02c78b039e9c69ede",
+    "directory_reproduction_permission": "Credits page permits full or partial reproduction when INEI is acknowledged as source.",
+    "district_capital_coordinates_independently_matched": 1874,
+    "other_official_sources": [
+      {
+        "title": "ENDES official portal",
+        "url": "https://proyectos.inei.gob.pe/endes/",
+        "role": "Survey-source attribution; original survey microdata are not included in the 35 CSVs."
+      },
+      {
+        "title": "Mapa de Pobreza Provincial y Distrital 2018",
+        "url": "https://www.gob.pe/institucion/inei/informes-publicaciones/3204872-mapa-de-pobreza-provincial-y-distrital-2018",
+        "role": "Public statistical source for derived district poverty strata; the original workbook is not reissued."
+      },
+      {
+        "title": "Census 2017 official aggregate query service",
+        "url": "https://censos2017.inei.gob.pe/redatam/",
+        "role": "Source of historical district predictors used in the research models; individual census records are not published."
+      }
+    ],
+    "research_estimates_are_official_inei_statistics": false,
+    "new_formal_license_assigned": false
+  },
+  "historical_scope_notes": "Earlier code-only and English-interface receipts document releases that excluded CSVs. This record supersedes that exclusion only for the 35 paths listed here; their scientific source identities remain unchanged.",
+  "records": [
+    {
+      "path": "simplified/inputs/datos/desarrollo/Laplace_candidate_ranking.csv",
+      "sha256": "2d9082b9dff104a2fdc403614cc9658a33405178bd06a52cf025905bfa880375",
+      "bytes": 514,
+      "data_rows": 5,
+      "columns": [
+        "rank",
+        "method",
+        "interval_score",
+        "coverage",
+        "balanced_RMSE_sqrt_mean_MSE",
+        "gap_IS95_from_best"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/desarrollo/NUTS_LOPO_selection_and_margins.csv",
+      "sha256": "0e9ffbaf7a3b3a8ea49ecdc0b8ce6f35012029618660884175b49da2f68f4e04",
+      "bytes": 3224,
+      "data_rows": 32,
+      "columns": [
+        "held_context",
+        "held_replication",
+        "selected_method",
+        "runner_up",
+        "training_IS95",
+        "training_margin_best_to_second",
+        "heldout_selected_IS95"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/desarrollo/NUTS_candidate_ranking.csv",
+      "sha256": "463ad9e7aea9fae2073e537b08e118008e2938fff6e1a35e3a3a72cc8e4453ba",
+      "bytes": 511,
+      "data_rows": 5,
+      "columns": [
+        "rank",
+        "method",
+        "interval_score",
+        "coverage",
+        "balanced_RMSE_sqrt_mean_MSE",
+        "gap_IS95_from_best"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/diagnosticos/corrected_method_diagnostic_summary.csv",
+      "sha256": "69f2e5e4a1bfa630fff14ca31c7b5d979eca04caa0f328053d127f1b0a769b57",
+      "bytes": 3163,
+      "data_rows": 31,
+      "columns": [
+        "bootstrap_failed",
+        "bootstrap_original_certificate_failed",
+        "bootstrap_original_raw_success_certificate_failed",
+        "bootstrap_requested",
+        "bootstrap_rescued",
+        "bootstrap_strict_retained",
+        "central_fits",
+        "central_original_certificate_failed",
+        "central_original_raw_success_certificate_failed",
+        "central_rescued",
+        "cohort",
+        "elapsed_seconds",
+        "jobs",
+        "max_process_RSS_bytes",
+        "method"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/diagnosticos/diagnostics_summary.csv",
+      "sha256": "23503d82da519bfde0eb5ce34032654d9563fa4f5b1c3b520ce3115b6a63d2d9",
+      "bytes": 21295,
+      "data_rows": 136,
+      "columns": [
+        "cohort",
+        "method",
+        "integration",
+        "populations_with_receipts",
+        "fits_or_stages_observed",
+        "final_diagnostic_records",
+        "all_attempt_diagnostic_records",
+        "max_observed_Rhat",
+        "min_observed_ESS_bulk",
+        "min_observed_ESS_tail",
+        "min_observed_E_BFMI",
+        "final_divergences",
+        "final_depth_hits",
+        "retries",
+        "endpoint_fits_retried",
+        "stage_retry_records",
+        "failed_attempt_stages",
+        "final_NUTS_failed_stages",
+        "final_REML_failed_fits",
+        "final_INLA_failed_fits",
+        "final_Laplace_failed_fits",
+        "raw_REML_optimizer_false",
+        "bootstrap_requested",
+        "bootstrap_failed",
+        "bootstrap_stationarity_recovered",
+        "all_attempt_divergences",
+        "all_attempt_depth_hits",
+        "all_attempt_max_Rhat",
+        "all_attempt_min_ESS_bulk",
+        "all_attempt_min_ESS_tail",
+        "all_attempt_min_E_BFMI",
+        "unknown_final_success",
+        "diagnostic_availability"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/diagnosticos/observed_numerical_diagnostic_summary.csv",
+      "sha256": "8699b3f6591094c87d040c1763d90e3ce95fbef94c8c0f995518709ee6564280",
+      "bytes": 1269,
+      "data_rows": 12,
+      "columns": [
+        "cohort",
+        "method",
+        "planned_worlds",
+        "observed_completed_methods",
+        "observed_NUTS_endpoints",
+        "max_Rhat_final",
+        "min_ESS_bulk_final",
+        "min_ESS_tail_final",
+        "min_E_BFMI_final",
+        "divergences_all_attempts",
+        "treedepth_hits_all_attempts",
+        "divergences_final",
+        "treedepth_hits_final",
+        "NUTS_retried_endpoints",
+        "NUTS_failed_final_endpoints",
+        "REML_stratum_fits_observed",
+        "REML_raw_optimizer_failures",
+        "REML_final_failures",
+        "REML_bootstrap_failed",
+        "REML_bootstrap_stationarity_recovered"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/incremental/incremental_summary.csv",
+      "sha256": "f2573729391e2080b94a5cb1d93df9dd27dcc026a39b5b5d5aa19d61da5c4ad7",
+      "bytes": 184653,
+      "data_rows": 450,
+      "columns": [
+        "scope",
+        "outcome",
+        "mask",
+        "metric",
+        "population_pairs",
+        "fixed_contexts",
+        "selected",
+        "icc",
+        "selected_mcse",
+        "icc_mcse",
+        "difference_selected_minus_icc",
+        "difference_mcse",
+        "descriptive95_low",
+        "descriptive95_high",
+        "ratio_selected_over_icc",
+        "relative_difference_percent",
+        "ratio_mcse",
+        "relative_difference_percent_mcse",
+        "relative_descriptive95_low",
+        "relative_descriptive95_high",
+        "inference",
+        "selected_coverage_CI_spans95",
+        "selected_distance95_bound_low",
+        "selected_distance95_bound_high",
+        "icc_coverage_CI_spans95",
+        "icc_distance95_bound_low",
+        "icc_distance95_bound_high",
+        "distance95_note"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/incremental/per_population_Selected_ICC_metrics.csv",
+      "sha256": "3b2fe99d3f2bb005f93af188207143e936c155d1e9c9c9af2e8028ad1466af26",
+      "bytes": 1014256,
+      "data_rows": 4608,
+      "columns": [
+        "context",
+        "replication",
+        "method",
+        "outcome",
+        "mask",
+        "districts",
+        "converged",
+        "interval_score",
+        "mse",
+        "bias",
+        "mae",
+        "coverage",
+        "width",
+        "population_rmse",
+        "population_coverage_distance95"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/mapa/area_frame.csv",
+      "sha256": "e1074557d155d879b716c611e3bbd45bc1cb9286ff74db5ddb82df7225c4d882",
+      "bytes": 76546,
+      "data_rows": 1874,
+      "columns": [
+        "ubigeo",
+        "latitude",
+        "longitude"
+      ],
+      "category": "official_district_capital_coordinates"
+    },
+    {
+      "path": "simplified/inputs/datos/mapa/district_availability_for_map.csv",
+      "sha256": "f229f8f89d25bfdbe36c412623fff3be83eb2f0c375078b34e4af0234a814873",
+      "bytes": 33871,
+      "data_rows": 1874,
+      "columns": [
+        "ubigeo",
+        "anemia_observed",
+        "stunting_observed"
+      ],
+      "category": "author_generated_district_endpoint_availability_flags"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/resultados/aplicacion2019/matched_application2019_districts.csv",
+      "sha256": "456f541bf947aa5a0e169fc72e63b90b579b714ed03a608d4eb822daa56229ca",
+      "bytes": 3504174,
+      "data_rows": 20614,
+      "columns": [
+        "ubigeo",
+        "method",
+        "p_anemia",
+        "lo95_anemia",
+        "hi95_anemia",
+        "p_stunting",
+        "lo95_stunting",
+        "hi95_stunting",
+        "latitude",
+        "longitude",
+        "poverty_stratum"
+      ],
+      "category": "author_generated_district_model_predictions"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/resultados/external_comparison_Holm12/paired_balanced_contrasts_Holm12.csv",
+      "sha256": "05446800bb354b48c4285cbd6d6791840876335cee1a4e4e6e0d5404d1cdb6ca",
+      "bytes": 3850,
+      "data_rows": 12,
+      "columns": [
+        "scope",
+        "candidate",
+        "reference",
+        "metric",
+        "difference",
+        "endpoint_difference_anemia",
+        "endpoint_difference_stunting",
+        "cluster_standard_error",
+        "province_clusters",
+        "t_df",
+        "p_two_sided",
+        "unadjusted_t_ci_low",
+        "unadjusted_t_ci_high",
+        "descriptive_bootstrap_ci_low",
+        "descriptive_bootstrap_ci_high",
+        "bootstrap_repetitions",
+        "evaluated_anemia_domains",
+        "evaluated_stunting_domains",
+        "p_Holm12",
+        "classification"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/resultados/poverty_stratum_descriptive/selected_reference_descriptive_differences.csv",
+      "sha256": "60f2ac3954f8e750024aa04e813b09be5c24dc01073cd43f1598288c4a48b0e6",
+      "bytes": 467884,
+      "data_rows": 2835,
+      "columns": [
+        "method",
+        "outcome",
+        "poverty_stratum",
+        "poverty_stratum_label",
+        "group",
+        "scenario",
+        "metric",
+        "difference_Selected_minus_reference",
+        "mcse",
+        "population_worlds",
+        "context_count",
+        "reference"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/resultados/published_b300_descriptive/summary.csv",
+      "sha256": "50f4cc73353ecd01b8b9bbc285ec6a068f9c2d799b74dda371da2687c3c589a7",
+      "bytes": 173252,
+      "data_rows": 1575,
+      "columns": [
+        "method",
+        "outcome",
+        "group",
+        "scenario",
+        "metric",
+        "estimate",
+        "mcse",
+        "population_worlds",
+        "context_count"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/resultados/published_sar_comparison/paired_balanced_contrasts_Holm3.csv",
+      "sha256": "1a498be5420b0981418aa2e1a9cf10b2e2489f41bae30feb4132a55f55c9c32c",
+      "bytes": 2772,
+      "data_rows": 18,
+      "columns": [
+        "candidate",
+        "reference",
+        "metric",
+        "paired_worlds",
+        "difference",
+        "mcse",
+        "MC_CI95_low",
+        "MC_CI95_high",
+        "p_two_sided",
+        "mcse_log_ratio",
+        "p_Holm3"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/resultados/published_sar_comparison/physical_projection_contrasts.csv",
+      "sha256": "7142f1d2c43b731b427f6c7c777eb97838a45bb74ad966ec6f12a68a306d8406",
+      "bytes": 2674,
+      "data_rows": 18,
+      "columns": [
+        "candidate",
+        "reference",
+        "metric",
+        "paired_worlds",
+        "difference",
+        "mcse",
+        "MC_CI95_low",
+        "MC_CI95_high",
+        "p_two_sided",
+        "mcse_log_ratio"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/resultados/published_sar_comparison/summary.csv",
+      "sha256": "5a1307c7b1e9ca30026e3c384e731d157b47e485ee0907616747e56eaa4415f6",
+      "bytes": 124763,
+      "data_rows": 264,
+      "columns": [
+        "scenario",
+        "method",
+        "protocol",
+        "group",
+        "outcome",
+        "replications",
+        "convergence_rate",
+        "mean_areas",
+        "mean_fit_seconds",
+        "mean_areas_requested",
+        "mean_availability_rate",
+        "rmse",
+        "rmse_mcse",
+        "bias",
+        "bias_mcse",
+        "mae",
+        "mae_mcse",
+        "coverage",
+        "coverage_mcse",
+        "width",
+        "width_mcse",
+        "interval_score",
+        "interval_score_mcse",
+        "mean_fit_seconds_current_reml",
+        "mean_fit_seconds_historical_reused",
+        "mean_fit_seconds_mixture_recompute",
+        "fit_seconds_scope"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/sensibilidad_sampled_graph/resultados/descriptive_summary.csv",
+      "sha256": "e794afec747c7755ea43c897117f074afd93fc19bcc8d38b22021c59d1a8781a",
+      "bytes": 34227,
+      "data_rows": 99,
+      "columns": [
+        "method",
+        "outcome",
+        "group",
+        "worlds",
+        "rmse",
+        "rmse_mcse",
+        "mse",
+        "mae",
+        "bias",
+        "interval_score",
+        "coverage",
+        "width",
+        "mse_mcse",
+        "mae_mcse",
+        "bias_mcse",
+        "interval_score_mcse",
+        "coverage_mcse",
+        "width_mcse",
+        "nonconverged_worlds_retained",
+        "descriptive_only"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/sikov/validacion/sikov_B300_descriptive_balanced.csv",
+      "sha256": "ce06812b345b073e82ba96d18736a78ab8c8dfb5465773216f7f3c5b7b808a7a",
+      "bytes": 2121,
+      "data_rows": 20,
+      "columns": [
+        "context",
+        "method",
+        "interval_score",
+        "coverage",
+        "width",
+        "mse"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/datos/sparse57/sparse57_exploratory_summary.csv",
+      "sha256": "8fd1320f2277ded13e339698ab4fdbb39f18aea2731c2a32ffd5579cd2da19af",
+      "bytes": 753845,
+      "data_rows": 1800,
+      "columns": [
+        "scope",
+        "outcome",
+        "mask",
+        "metric",
+        "population_pairs",
+        "fixed_contexts",
+        "selected",
+        "reference",
+        "selected_mcse",
+        "reference_mcse",
+        "difference_selected_minus_reference",
+        "difference_mcse",
+        "descriptive95_low",
+        "descriptive95_high",
+        "ratio_selected_over_reference",
+        "relative_difference_percent",
+        "ratio_mcse",
+        "relative_difference_percent_mcse",
+        "relative_descriptive95_low",
+        "relative_descriptive95_high",
+        "inference",
+        "selected_coverage_CI_spans95",
+        "selected_distance95_bound_low",
+        "selected_distance95_bound_high",
+        "reference_coverage_CI_spans95",
+        "reference_distance95_bound_low",
+        "reference_distance95_bound_high",
+        "distance95_note",
+        "reference_method"
+      ],
+      "category": "author_generated_simulation_metrics_or_aggregate_diagnostics"
+    },
+    {
+      "path": "simplified/inputs/referencias/Articulo/Tabla_1.csv",
+      "sha256": "945c6c510d8b5cc74c4906c6ed319522e0ca4051d7a74834b6d76c917b4cd72b",
+      "bytes": 526,
+      "data_rows": 10,
+      "columns": [
+        "Estimator",
+        "Outcome",
+        "RMSE",
+        "Coverage",
+        "Width",
+        "IS95"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Articulo/Tabla_2.csv",
+      "sha256": "85996112f17615a20a44b19aebe1b7c8ce567a89376d4afda5fb8a6a9e0fab5f",
+      "bytes": 190,
+      "data_rows": 3,
+      "columns": [
+        "Reference",
+        "Difference",
+        "95% MC interval",
+        "Holm p"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Articulo/Tabla_3.csv",
+      "sha256": "e9312413156f267067beb949ee5cad850ae02e0c11169daac797068eb576eabc",
+      "bytes": 649,
+      "data_rows": 7,
+      "columns": [
+        "Metric",
+        "Proposed mixture",
+        "ICC",
+        "Difference",
+        "MCSE",
+        "Descriptive 95% interval",
+        "Relative change,%"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Articulo/Tabla_4.csv",
+      "sha256": "2d59846209fd6f55df2bb4b6c89d588652c3c1aa9f5cd17d7d01fff1475b8d29",
+      "bytes": 350,
+      "data_rows": 4,
+      "columns": [
+        "Reference",
+        "IS95 difference [MC 95% interval]",
+        "Relative change (%)",
+        "RMSE difference (pp)"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Articulo/Tabla_5.csv",
+      "sha256": "c8c975c85ee5d9b08ac487e2d11f3bec9ed177040b8eb92150d2c2f4cee217e7",
+      "bytes": 808,
+      "data_rows": 12,
+      "columns": [
+        "Scope",
+        "Reference",
+        "Metric",
+        "Difference",
+        "95% cluster interval",
+        "Holm p"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S1.csv",
+      "sha256": "f170e90b34b10eb228906b43a0e6a1a3250606e14619282d2c10135e2ff2491e",
+      "bytes": 294,
+      "data_rows": 5,
+      "columns": [
+        "Candidate",
+        "Laplace IS95 (rank)",
+        "NUTS IS95 (rank)",
+        "NUTS LOPO wins"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S2.csv",
+      "sha256": "34f646c2d8742bb791f844920eb933a96b5b5336a67ee0e9e6dd6f996b4a4a06",
+      "bytes": 4594,
+      "data_rows": 36,
+      "columns": [
+        "Context",
+        "Outcome",
+        "Domains",
+        "IS95 P / ICC",
+        "IS95 difference (MCSE)",
+        "RMSE P / ICC,pp",
+        "Coverage P / ICC,%",
+        "Width P / ICC,pp"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S23.csv",
+      "sha256": "8e026b8e3ef16ad39cd0e9d9c1cee9eb55c7eb156db96c893d956cec97654257",
+      "bytes": 336,
+      "data_rows": 7,
+      "columns": [
+        "Cohort",
+        "Central fits",
+        "Central rescued",
+        "Bootstrap draws",
+        "Bootstrap rescued",
+        "Bootstrap rejected"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S3.csv",
+      "sha256": "9ab0078c2cbbabf309776e32be737bcd11c9cda37daf2a7940c7fcd8dfcb18df",
+      "bytes": 1223,
+      "data_rows": 12,
+      "columns": [
+        "Support",
+        "Reference",
+        "IS95 difference [MC 95% interval]",
+        "RMSE difference (pp)",
+        "Coverage difference (pp)",
+        "Width difference (pp)",
+        "Distance95 difference (pp)"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S4.csv",
+      "sha256": "736ebb1fcea954563084cd63d845c34b872406a561855a5e2fc3a6fe6e15619c",
+      "bytes": 1338,
+      "data_rows": 21,
+      "columns": [
+        "Cohort / strategy",
+        "Fits",
+        "Max Rhat / min E-BFMI",
+        "Min ESS bulk / tail",
+        "Div. / depth",
+        "Retry / NUTS fail",
+        "REML fail",
+        "Bootstrap fail"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S5.csv",
+      "sha256": "340d3a2ff3a8208cc4675a265d0d54a36b86519864fae3a65164e5cd7ff0fb02",
+      "bytes": 162,
+      "data_rows": 3,
+      "columns": [
+        "Reference",
+        "Difference",
+        "95% MC interval"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S6.csv",
+      "sha256": "8e134c43317c5d8afe06bb5500bd861fc23b77fdae98c8696facdab007629c0b",
+      "bytes": 288,
+      "data_rows": 6,
+      "columns": [
+        "Estimator",
+        "Outcome",
+        "IS95",
+        "Coverage %",
+        "Width pp"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S7.csv",
+      "sha256": "5ad54ac04a733a424da64507294e8639e6cd9807e5c57f54f9d795fb4aa02364",
+      "bytes": 345,
+      "data_rows": 8,
+      "columns": [
+        "Estimator",
+        "IS95",
+        "Coverage %",
+        "Width pp"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S8.csv",
+      "sha256": "6e7ffec4e164a071e22d0f0465b0f48e029584e6ea7a6acd04c641b1c6aaa6b7",
+      "bytes": 648,
+      "data_rows": 9,
+      "columns": [
+        "Stratum",
+        "Reference",
+        "All districts",
+        "Observed endpoint",
+        "Outside sample"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    },
+    {
+      "path": "simplified/inputs/referencias/Suplemento/Tabla_S9.csv",
+      "sha256": "d22784f26a9315aa1b8b6d005520304ed15a9297ccbf1bef8389e2641b59f8f1",
+      "bytes": 223,
+      "data_rows": 5,
+      "columns": [
+        "Strategy",
+        "RMSE pp",
+        "Coverage %",
+        "Width pp",
+        "IS95"
+      ],
+      "category": "author_generated_numeric_reference_table"
+    }
+  ],
+  "validation": {
+    "status": "PASS_CLEAN_CHECKOUT_BUNDLED_REGENERATION",
+    "checkout_files": 481,
+    "default_inputs": "bundled",
+    "input_data_from_external_or_original_private_directories": false,
+    "help_routes_passed": 23,
+    "verified_source_files": 18,
+    "verified_bundled_csvs": 35,
+    "tables_byte_identical": 15,
+    "pngs_byte_identical": 5,
+    "svg_outputs": 5,
+    "protected_scientific_and_adapter_files_unchanged": 354,
+    "model_refits_run": false,
+    "original_input_hash_contract_unchanged": true,
+    "checkout_unchanged_after_execution": true,
+    "private_clean_checkout_receipt_sha256": "c33ebe7d3e5b61c8f4784cfb2b6a1cac80c78fe422c57cf775a58bcaf8b8d1a9",
+    "public_input_guard_checks": 13
+  }
+}

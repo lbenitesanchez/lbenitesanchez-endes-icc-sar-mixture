@@ -1,0 +1,13 @@
+﻿Scope,Reference,Metric,Difference,95% cluster interval,Holm p
+temporal,FH,MSE,-0.00312,"[-0.00437, -0.00186]",<0.001
+temporal,SAR full graph,MSE,-0.00226,"[-0.00336, -0.00116]",<0.001
+temporal,SAR observed,MSE,-0.00210,"[-0.00317, -0.00104]",<0.001
+temporal,FH,NLL,-0.01140,"[-0.01508, -0.00772]",<0.001
+temporal,SAR full graph,NLL,-0.00923,"[-0.01258, -0.00588]",<0.001
+temporal,SAR observed,NLL,-0.01012,"[-0.01466, -0.00557]",<0.001
+territorial,FH,MSE,-0.00084,"[-0.00286, 0.00118]",1
+territorial,SAR full graph,MSE,-0.00074,"[-0.00278, 0.00130]",1
+territorial,SAR observed,MSE,-0.00121,"[-0.00333, 0.00090]",1
+territorial,FH,NLL,-0.00285,"[-0.00841, 0.00272]",1
+territorial,SAR full graph,NLL,-0.00182,"[-0.00697, 0.00333]",1
+territorial,SAR observed,NLL,-0.00333,"[-0.00906, 0.00240]",1

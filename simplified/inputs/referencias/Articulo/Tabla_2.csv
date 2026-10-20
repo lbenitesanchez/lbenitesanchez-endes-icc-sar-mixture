@@ -1,0 +1,4 @@
+﻿Reference,Difference,95% MC interval,Holm p
+FH,-0.1735,"[-0.1828, -0.1642]",<0.001
+SAR full graph,-0.1701,"[-0.1794, -0.1607]",<0.001
+SAR observed,-0.1700,"[-0.1794, -0.1607]",<0.001

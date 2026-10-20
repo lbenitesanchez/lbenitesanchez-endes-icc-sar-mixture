@@ -1,0 +1,22 @@
+﻿Cohort / strategy,Fits,Max Rhat / min E-BFMI,Min ESS bulk / tail,Div. / depth,Retry / NUTS fail,REML fail,Bootstrap fail
+Development 32 / ICC Laplace,64,—,—,—,—,—,—
+Principal256 / ICC,512,1.00807 / 0.699,952.6 / 1206.0,0 / 0,2 / 0,—,—
+Graph64 / ICC,128,1.00610 / 0.720,973.1 / 1358.6,0 / 0,0 / 0,—,—
+Real2019 / ICC,2,1.00422 / 0.936,1530.1 / 2040.4,0 / 0,0 / 0,—,—
+Real2024 / ICC,2,1.00343 / 0.863,1437.6 / 2049.0,0 / 0,0 / 0,—,—
+Development 32 / FH,192,—,—,—,—,0,0
+Development 32 / full SAR,192,—,—,—,—,0,0
+Principal256 / FH,1536,—,—,—,—,0,0
+Principal256 / full SAR,1536,—,—,—,—,0,0
+Principal256 / observed SAR,1536,—,—,—,—,0,0
+Graph64 / FH,384,—,—,—,—,0,0
+Graph64 / full SAR,384,—,—,—,—,0,0
+Graph64 / observed SAR,384,—,—,—,—,0,0
+Real2019 / FH + both SAR,18,—,—,—,—,0,0
+Real2024 / FH + both SAR,18,—,—,—,—,0,0
+Development 32 NUTS / ICC,64,1.00667 / 0.730,1037.7 / 1636.0,0 / 0,0 / 0,—,—
+Development 32 NUTS / poverty ICC,64,1.00864 / 0.598,611.8 / 1437.8,0 / 0,0 / 0,—,—
+NewSparse256 / ICC NUTS,512,1.00872 / 0.644,877.2 / 1022.6,0 / 0,0 / 0,—,—
+NewSparse256 / FH,1536,—,—,—,—,0,0
+NewSparse256 / full SAR,1536,—,—,—,—,0,0
+NewSparse256 / observed SAR,1536,—,—,—,—,0,0

@@ -4,7 +4,7 @@ This is the recommended reader-facing interface for the **75% ICC beta + 25% ful
 
 It covers **20 outputs: article Tables 1–5 and Figures 1–3; supplement Tables S1–S9 and S23, and Figures S1–S2**. Historical supplement Tables S10–S22 and Figures S3–S6 have no simplified entry points; use the [original-source map](../REPRODUCING.md#historical-supplement-results).
 
-**A fresh clone is not sufficient to generate numerical outputs.** Obtain the complete [external input bundle](INPUTS.md#obtaining-the-input-bundle) first. The commands here regenerate outputs from corrected derived inputs; they do not rerun statistical model fits.
+**The 35 required CSVs are included in [inputs/](inputs/).** A fresh clone and the Python environment are sufficient for this simplified route. The files are derived research inputs and numerical reference tables; the principal ENDES survey microdata are excluded. The commands here regenerate outputs from corrected derived inputs; they do not rerun statistical model fits.
 
 ## Execution order
 
@@ -16,21 +16,21 @@ python3.12 -m venv .venv
 python -m pip install -r simplified/requirements.txt
 ```
 
-Set two folders **outside the repository** and verify the inputs:
+Use the included inputs and set one output folder **outside the repository**:
 
 ```sh
-export IAOS_SIMPLE_DATA_ROOT="/external/path/simplified_inputs"
-export IAOS_SIMPLE_OUTPUT_ROOT="/external/path/simplified_outputs"
+unset IAOS_SIMPLE_DATA_ROOT
+export IAOS_SIMPLE_OUTPUT_ROOT="$PWD/../endes-mixture-outputs"
 python simplified/verify_inputs.py
 ```
 
-Replace both example paths with your own folders. The input root must directly contain the `datos/` and `referencias/` files described in [INPUTS.md](INPUTS.md). The output folder must be separate from the input folder, outside the checkout, and either new, empty or already managed by this workflow.
+No input path is needed: the default is `simplified/inputs/`. `unset` clears an override left from an earlier session. The output folder must be outside the checkout and either new, empty or already managed by this workflow. You can choose another external output folder. See [INPUTS.md](INPUTS.md) for optional external input bundles.
 
-The order is **install → obtain and verify all 35 inputs → choose one result, a group or all 20 → inspect verification reports**. All 35 CSVs are required even for a single table or figure. The simplified route uses Python only; R and CmdStan are additional requirements for full re-estimation. `--help` displays the options without requiring data.
+The order is **install → verify the 35 included inputs → choose one result, a group or all 20 → inspect verification reports**. All 35 CSVs are checked even for a single table or figure. The simplified route uses Python only; R and CmdStan are additional requirements for full re-estimation. `--help` displays the options without requiring data.
 
 ## Run one result, a group or all 20
 
-After setting the variables and verifying inputs above, choose the command you need. For example, generate Figure 1 or Table 3 directly:
+After setting the output folder and verifying inputs above, choose the command you need. For example, generate Figure 1 or Table 3 directly:
 
 ```sh
 python simplified/article/figure_1/generate.py
@@ -57,17 +57,16 @@ python simplified/run_all.py
 
 The article group has 8 outputs; the supplement group has 12. Run only the command corresponding to your choice. To select one result through the batch runner, use its identifier, for example `python simplified/run_all.py --only Article_Table_3`.
 
-You can pass `--data-root` and `--output-root` directly instead of setting environment variables. For example:
+You can pass `--output-root` directly instead of setting an environment variable. For example, using the included inputs:
 
 ```sh
 python simplified/article/table_3/generate.py \
-  --data-root "/external/path/simplified_inputs" \
-  --output-root "/external/path/simplified_outputs"
+  --output-root "../endes-mixture-outputs"
 ```
 
 ## Tables and figures
 
-The commands below assume that the terminal is at the repository root, the Python environment is activated, and both external-folder variables are set. Every output path is relative to `IAOS_SIMPLE_OUTPUT_ROOT`. Figure entries also create the corresponding `.svg` file.
+The commands below assume that the terminal is at the repository root, the Python environment is activated, and `IAOS_SIMPLE_OUTPUT_ROOT` is set. Every output path is relative to that output root. Figure entries also create the corresponding `.svg` file.
 
 | Result and purpose | Command | Main output |
 | --- | --- | --- |
@@ -96,7 +95,7 @@ The commands below assume that the terminal is at the repository root, the Pytho
 
 ## Check the generated results
 
-Each table is checked cell by cell against its external reference CSV. Each figure is checked against the registered plotted-value fingerprint; its report also records whether the PNG is byte-identical to the archived image. Rendering differences across environments can affect PNG bytes, so inspect that field separately from the plotted-value check.
+Each table is checked cell by cell against its registered reference CSV. Each figure is checked against the registered plotted-value fingerprint; its report also records whether the PNG is byte-identical to the archived image. Rendering differences across environments can affect PNG bytes, so inspect that field separately from the plotted-value check.
 
 Read `verification.json` beside each result. At the output root, `EXECUTION_VERIFICATION.json` records the **latest invocation only**: running a single result after a batch replaces that batch summary. Use `run_all.py` in one invocation when you want a report covering all 20 outputs. Previously generated per-result files remain in their own folders.
 
@@ -114,8 +113,8 @@ python simplified/model/mixture_75_25.py --help
 
 The 20 entry points regenerate tables and figures from **derived inputs produced by the corrected fits**. Table 3 and Table S2 recalculate paired statistics from population-level metrics; the other tables format certified aggregates. Figures are drawn again using the original plotting statements. Reference tables are read only after computation to verify the result.
 
-Before running, the workflow checks 18 original source files and 35 external inputs against [input_hashes.json](input_hashes.json). A temporary view outside the checkout preserves the relative paths required by the analysis adapters and is removed when execution finishes. All generated artifacts stay in the external output folder.
+Before running, the workflow checks 18 original source files and 35 included inputs against [input_hashes.json](input_hashes.json). A temporary view outside the checkout preserves the relative paths required by the analysis adapters and is removed when execution finishes. All generated artifacts stay in the external output folder.
 
 This interface does not repeat NUTS, REML or bootstrap fitting. For full re-estimation from source data, follow [REPRODUCING.md](../REPRODUCING.md) and [DATA_INPUTS.md](../reproduction/DATA_INPUTS.md), retaining the prescribed input checks, prediction locks and validation order.
 
-The repository contains source code, instructions and hashes. It excludes data records, saved tables, images and article documents. Older Spanish entry-point paths remain available for compatibility; use the English paths in this guide for new work.
+The repository includes the reviewed derived CSVs and numerical reference tables described in [inputs/README.md](inputs/README.md). It excludes principal survey microdata, fitted states, chains, generated images and article documents. Older Spanish entry-point paths remain available for compatibility with external bundles; use the English paths in this guide for the included inputs.

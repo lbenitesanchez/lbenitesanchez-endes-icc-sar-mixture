@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Please cite this scientific code release."
+message: "Please cite this scientific code and reviewed derived-input release."
 type: software
-title: "ENDES ICC SAR mixture scientific code"
-version: "2026.10.18-code-only"
+title: "ENDES ICC SAR mixture code and reproduction inputs"
+version: "2026.10.19-reproduction"
 repository-code: "https://github.com/lbenitesanchez/lbenitesanchez-endes-icc-sar-mixture"
 authors:
   - family-names: Benites

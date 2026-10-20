@@ -1,0 +1,6 @@
+﻿Candidate,Laplace IS95 (rank),NUTS IS95 (rank),NUTS LOPO wins
+Proposed mixture (75/25),0.362065 (1),0.366742 (1),32
+ICC/SAR 50/50,0.372879 (2),0.376186 (3),0
+ICC/SAR 25/75,0.384781 (3),0.387464 (4),0
+ICC beta,0.388841 (4),0.374592 (2),0
+Poverty-stratum ICC,0.427275 (5),0.404850 (5),0

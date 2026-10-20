@@ -1,0 +1,5 @@
+﻿Reference,IS95 difference [MC 95% interval],Relative change (%),RMSE difference (pp)
+ICC beta,"-0.004837 [-0.009673, -0.000002]",-0.99,-0.8354
+Fay–Herriot,"-0.168600 [-0.179502, -0.157698]",-25.87,-2.0561
+Full-graph SAR,"-0.164969 [-0.176321, -0.153616]",-25.45,-2.0904
+Observed-domain SAR,"-0.159668 [-0.170519, -0.148818]",-24.84,-2.0711

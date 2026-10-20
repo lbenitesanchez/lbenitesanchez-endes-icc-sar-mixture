@@ -1,8 +1,8 @@
-"""Check the code-only release; no data access or model fitting."""
+"""Check source files and the exact approved CSV bundle; no model fitting."""
 import ast
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import sys
 
@@ -19,14 +19,46 @@ def files():
     return sorted(p for p in ROOT.rglob('*') if p.is_file() and not any(part in SKIP for part in p.relative_to(ROOT).parts) and p.name != '.DS_Store')
 
 
+def approved_csvs():
+    """Only the 35 frozen, reviewed input identities may be distributed as CSV."""
+    contract = json.loads((ROOT / 'simplified/input_hashes.json').read_text())
+    registered = contract['external_inputs_sha256']
+    if not isinstance(registered, dict) or len(registered) != 35:
+        raise ValueError('The approved bundle must contain exactly 35 CSVs')
+    approved = {}
+    for relative, digest in registered.items():
+        path = PurePosixPath(relative)
+        if (path.is_absolute() or '\\' in relative or any(part in ('', '.', '..') for part in relative.split('/'))
+                or not relative.startswith(('datos/', 'referencias/')) or path.suffix != '.csv'
+                or not isinstance(digest, str) or not re.fullmatch('[0-9a-f]{64}', digest)):
+            raise ValueError('Invalid registered CSV identity: ' + relative)
+        approved['simplified/inputs/' + relative] = digest
+    return approved
+
+
 def main():
     problems = []
     all_files = files()
+    try:
+        approved = approved_csvs()
+    except (KeyError, TypeError, ValueError, OSError) as error:
+        approved = {}
+        problems.append(('simplified/input_hashes.json', str(error)))
+    for path in ROOT.rglob('*'):
+        relative = path.relative_to(ROOT)
+        if path.is_symlink() and not any(part in SKIP for part in relative.parts):
+            problems.append((relative.as_posix(), 'symlink'))
+    present = {p.relative_to(ROOT).as_posix() for p in all_files}
+    for relative in sorted(set(approved) - present):
+        problems.append((relative, 'missing approved CSV'))
     for p in all_files:
         relative = p.relative_to(ROOT).as_posix()
         if p.is_symlink(): problems.append((relative, 'symlink'))
-        if p.suffix.lower() not in ALLOWED and p.name not in SPECIAL: problems.append((relative, 'non-code artifact extension'))
+        if p.suffix.lower() not in ALLOWED and p.name not in SPECIAL and relative not in approved:
+            problems.append((relative, 'unapproved artifact extension'))
         data = p.read_bytes()
+        if relative in approved and hashlib.sha256(data).hexdigest() != approved[relative]:
+            problems.append((relative, 'approved CSV hash differs'))
         try: text = data.decode('utf-8')
         except UnicodeDecodeError:
             problems.append((relative, 'binary payload')); continue
@@ -46,7 +78,10 @@ def main():
         problems.append(('provenance/release_files.json', 'source inventory differs'))
     if problems:
         print(json.dumps({'status': 'FAIL', 'findings': problems}, indent=2)); raise SystemExit(1)
-    print(json.dumps({'status': 'PASS_CODE_ONLY_RELEASE', 'files': len(all_files), 'indexed_files': len(expected), 'data_or_documents_included': False, 'model_fits_run_by_this_check': False}))
+    print(json.dumps({'status': 'PASS_PUBLIC_REPRODUCTION_RELEASE', 'files': len(all_files),
+                      'indexed_files': len(expected), 'approved_derived_csv_files': len(approved),
+                      'private_microdata_or_submission_documents_included': False,
+                      'model_fits_run_by_this_check': False}))
 
 
 if __name__ == '__main__':

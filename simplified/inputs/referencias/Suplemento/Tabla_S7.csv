@@ -1,0 +1,9 @@
+﻿Estimator,IS95,Coverage %,Width pp
+SAR full graph B100,0.539,89.9,30.81
+SAR full graph B300,0.541,90.4,30.80
+Proposed mixture B100,0.384,95.9,32.87
+Proposed mixture B300,0.384,95.8,32.85
+Observed SAR B100,0.546,90.0,30.76
+Observed SAR B100 BC,0.538,90.5,31.68
+Observed SAR B300,0.540,90.2,31.01
+Observed SAR B300 BC,0.538,90.6,31.72

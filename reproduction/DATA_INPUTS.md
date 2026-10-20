@@ -1,6 +1,6 @@
 # External input requirements
 
-This code-only repository contains no input datasets, survey rows, geography arrays, fitted states, chains or saved result tables. Keep them outside the checkout and pass explicit paths to the preparation and fitting CLIs.
+The simplified workflow includes 35 reviewed derived CSVs and numerical reference tables under [simplified/inputs/](../simplified/inputs/). They are sufficient to regenerate its 20 supported outputs. **The principal ENDES survey microdata and complete model-fitting inputs are not included.** The full workflow below still requires external survey rows, auxiliary arrays, fitted states and reference trees. Keep these original inputs and all generated output outside the checkout and pass explicit paths to the preparation and fitting CLIs.
 
 ## Official survey acquisition records
 
@@ -21,4 +21,4 @@ Actual-data preparation additionally needs the recorded district census predicto
 
 Simulation generation requires the original synthetic auxiliary template and scientific reference freezes. The correction stage requires the recorded original input/prediction/status trees. These are external prerequisites, not files created by installing Python dependencies. Historical freeze records that contain private filesystem locations remain in the private reference tree, read via `--reference-root`; they are not published.
 
-To rerun exactly the archived comparison, obtain/materialize the corresponding reference inputs and verify their recorded hashes. To create a new run on another platform, register its source/executable/input identities before generation and report resulting differences honestly. The scientific code, seed rules and input preparation routines are available here; this repository is not a self-contained reproduction archive.
+To rerun exactly the archived comparison, obtain/materialize the corresponding reference inputs and verify their recorded hashes. To create a new run on another platform, register its source/executable/input identities before generation and report resulting differences honestly. The scientific code, seed rules and input preparation routines are available here; this repository supports regeneration of the 20 simplified outputs after dependency installation, while re-estimating the models still requires the external source data.

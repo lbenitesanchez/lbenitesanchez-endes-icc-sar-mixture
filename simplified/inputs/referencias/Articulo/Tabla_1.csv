@@ -1,0 +1,11 @@
+﻿Estimator,Outcome,RMSE,Coverage,Width,IS95
+FH,anaemia,9.98,89.1,32.48,0.575
+SAR full graph,anaemia,9.88,88.8,31.69,0.569
+SAR observed,anaemia,9.86,88.8,31.72,0.569
+ICC beta,anaemia,8.68,94.7,31.02,0.379
+Proposed mixture (75% ICC beta + 25% SAR),anaemia,8.39,96.0,33.28,0.378
+FH,stunting,9.08,89.1,29.71,0.519
+SAR full graph,stunting,9.10,88.9,29.38,0.519
+SAR observed,stunting,9.09,88.9,29.22,0.518
+ICC beta,stunting,8.82,94.6,31.04,0.383
+Proposed mixture (75% ICC beta + 25% SAR),stunting,8.25,96.4,32.83,0.369

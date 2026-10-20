@@ -1,0 +1,13 @@
+﻿Support,Reference,IS95 difference [MC 95% interval],RMSE difference (pp),Coverage difference (pp),Width difference (pp),Distance95 difference (pp)
+All,ICC beta,"-0.004837 [-0.009673, -0.000002]",-0.8354,1.979,3.906,1.979
+All,Fay–Herriot,"-0.168600 [-0.179502, -0.157698]",-2.0561,7.158,2.314,-3.099
+All,Full-graph SAR,"-0.164969 [-0.176321, -0.153616]",-2.0904,7.497,3.235,-3.437
+All,Observed-domain SAR,"-0.159668 [-0.170519, -0.148818]",-2.0711,6.916,2.200,-2.856
+Observed endpoint,ICC beta,"+0.000745 [-0.001281, +0.002771]",-0.0576,0.651,0.772,0.651
+Observed endpoint,Fay–Herriot,"-0.231078 [-0.246231, -0.215925]",-1.4892,9.587,3.697,-7.962
+Observed endpoint,Full-graph SAR,"-0.228158 [-0.243809, -0.212507]",-1.4592,9.553,3.929,-7.928
+Observed endpoint,Observed-domain SAR,"-0.227748 [-0.243333, -0.212162]",-1.4541,9.598,3.922,-7.972
+Outside sample,ICC beta,"-0.009888 [-0.018554, -0.001222]",-1.3259,3.181,6.741,3.080
+Outside sample,Fay–Herriot,"-0.112073 [-0.126003, -0.098143]",-2.4639,4.960,1.063,1.301
+Outside sample,Full-graph SAR,"-0.107797 [-0.122001, -0.093593]",-2.5383,5.636,2.608,0.625
+Outside sample,Observed-domain SAR,"-0.098073 [-0.110709, -0.085437]",-2.5099,4.489,0.643,1.772

@@ -1,0 +1,6 @@
+﻿Strategy,RMSE pp,Coverage %,Width pp,IS95
+FH,5.17,91.6,18.62,0.2563
+SAR full graph,5.13,91.1,18.05,0.2595
+SAR observed,5.08,91.2,18.10,0.2562
+ICC beta,6.03,94.8,22.04,0.2675
+Proposed mixture,5.46,96.4,22.24,0.2491

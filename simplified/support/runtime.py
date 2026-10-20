@@ -1,4 +1,4 @@
-"""English table/figure interface with verified external inputs and outputs.
+"""English table/figure interface with verified inputs and external outputs.
 
 The original numerical adapters run unchanged in a temporary external view.
 Verified sources and derived inputs are copied without symbolic links. No model
@@ -20,6 +20,7 @@ import tempfile
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 REPO = ROOT.parent.resolve()
+BUNDLED_INPUTS = ROOT / "inputs"
 MARKER = ".iaos_simplified_output.json"
 MARKER_KIND = "endes-icc-sar-mixture:simplified:english-aggregate-regeneration-v1"
 
@@ -44,7 +45,8 @@ def _relative(value):
 def _file(root, relative):
     root = Path(root).resolve()
     path = root / _relative(relative)
-    if not path.is_file() or path.is_symlink() or not path.resolve().is_relative_to(root):
+    linked = any(candidate.is_symlink() for candidate in (path, *path.parents) if candidate != root)
+    if not path.is_file() or linked or not path.resolve().is_relative_to(root):
         raise ValueError("Missing, linked, or out-of-tree file: " + relative)
     return path
 
@@ -54,6 +56,22 @@ def _external(path, label):
     if path.is_relative_to(REPO) or REPO.is_relative_to(path):
         raise ValueError(label + " must be outside the repository")
     return path
+
+
+def default_data_root():
+    """Prefer an explicit environment override, otherwise use the public bundle."""
+    return os.environ.get("IAOS_SIMPLE_DATA_ROOT", str(BUNDLED_INPUTS))
+
+
+def _data_root(path):
+    """Allow the registered bundled directory or a separate external bundle."""
+    candidate = Path(path).expanduser().absolute()
+    if any(part.is_symlink() for part in (candidate, *candidate.parents)):
+        raise ValueError("--data-root must not contain symbolic links")
+    candidate = candidate.resolve()
+    if candidate == BUNDLED_INPUTS:
+        return candidate
+    return _external(candidate, "--data-root")
 
 
 def _contract():
@@ -85,8 +103,8 @@ def verify_sources(required=None):
 
 
 def verify_inputs(input_root):
-    """Verify 18 sources and 35 external CSVs without writing files."""
-    input_root = _external(input_root, "--data-root")
+    """Verify 18 sources and 35 approved CSVs without writing files."""
+    input_root = _data_root(input_root)
     if not input_root.is_dir():
         raise ValueError("--data-root must identify an existing directory")
     sources = verify_sources()
@@ -95,11 +113,13 @@ def verify_inputs(input_root):
         if sha(_file(input_root, relative)) != digest:
             raise RuntimeError("External input has changed: " + relative)
     return {"status": "PASS", "verified_sources": sources["verified_sources"],
-            "verified_external_inputs": len(inputs), "model_fits_run": False}
+            "verified_external_inputs": len(inputs), "model_fits_run": False,
+            "input_location": "bundled" if input_root == BUNDLED_INPUTS else "external",
+            "approved_csvs_distributed_in_git": True}
 
 
 def _output_root(data_root, output_root):
-    data_root = _external(data_root, "--data-root")
+    data_root = _data_root(data_root)
     output_root = _external(output_root, "--output-root")
     if output_root.is_relative_to(data_root) or data_root.is_relative_to(output_root):
         raise ValueError("Input and output directories must be separate and must not overlap")
@@ -217,7 +237,7 @@ def _generate(view, record, output_root):
             json.dumps(evidence, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
     result = {"artifact_id": record["id"], "status": "PASS", "scope": "regeneration_from_derived_inputs",
               "model_refits_run": False, "original_sources_modified": False,
-              "inputs_distributed_in_git": False, "temporary_view_without_links": True,
+              "inputs_distributed_in_git": True, "temporary_view_without_links": True,
               "output": str(destination.relative_to(output_root)), "comparison": comparison,
               "details": evidence}
     (out / "verification.json").write_text(json.dumps(result, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
@@ -226,14 +246,14 @@ def _generate(view, record, output_root):
 
 
 def regenerate(artifact_ids, data_root, output_root):
-    """Regenerate selected artifacts with external input and output directories."""
+    """Regenerate selected artifacts with verified inputs and external outputs."""
     records = artifacts()
     aliases = {x["legacy_id"]: x["id"] for x in records}
     requested = [aliases.get(identifier, identifier) for identifier in artifact_ids]
     selected = [x for x in records if x["id"] in set(requested)]
     if not selected or len(selected) != len(set(requested)):
         raise ValueError("Unknown or empty artifact selection")
-    data_root = _external(data_root, "--data-root")
+    data_root = _data_root(data_root)
     output_root, marker = _output_root(data_root, output_root)
     checks = verify_inputs(data_root)
     output_root.mkdir(parents=True, exist_ok=True)
@@ -265,8 +285,8 @@ def main(artifact_id=None):
     aliases.update({"articulo": "article", "suplemento": "supplement"})
     normalize = lambda value: aliases.get(value, value)
     parser = argparse.ArgumentParser(description="Regenerate tables and figures from verified external inputs; no model refitting.")
-    parser.add_argument("--data-root", type=Path, default=os.environ.get("IAOS_SIMPLE_DATA_ROOT"),
-                        help="External directory containing datos/ and referencias/, or IAOS_SIMPLE_DATA_ROOT")
+    parser.add_argument("--data-root", type=Path, default=default_data_root(),
+                        help="Input directory containing datos/ and referencias/; defaults to simplified/inputs, or IAOS_SIMPLE_DATA_ROOT")
     parser.add_argument("--output-root", type=Path, default=os.environ.get("IAOS_SIMPLE_OUTPUT_ROOT"),
                         help="New or managed external output directory, or IAOS_SIMPLE_OUTPUT_ROOT")
     if artifact_id is None:
@@ -274,8 +294,8 @@ def main(artifact_id=None):
         parser.add_argument("--only", type=normalize, choices=choices)
         parser.add_argument("--solo", type=normalize, choices=choices, dest="only", help=argparse.SUPPRESS)
     args = parser.parse_args()
-    if args.data_root is None or args.output_root is None:
-        parser.error("Provide --data-root and --output-root, or their environment variables")
+    if args.output_root is None:
+        parser.error("Provide --output-root or IAOS_SIMPLE_OUTPUT_ROOT")
     if artifact_id is not None:
         ids = [normalize(artifact_id)]
     else:

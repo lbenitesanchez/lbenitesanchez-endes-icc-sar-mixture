@@ -1,0 +1,13 @@
+cohort,method,planned_worlds,observed_completed_methods,observed_NUTS_endpoints,max_Rhat_final,min_ESS_bulk_final,min_ESS_tail_final,min_E_BFMI_final,divergences_all_attempts,treedepth_hits_all_attempts,divergences_final,treedepth_hits_final,NUTS_retried_endpoints,NUTS_failed_final_endpoints,REML_stratum_fits_observed,REML_raw_optimizer_failures,REML_final_failures,REML_bootstrap_failed,REML_bootstrap_stationarity_recovered
+development_nuts,Sikov_FH,32,32,0,,,,,,,,,,,192.0,0.0,0.0,0.0,0.0
+development_nuts,Sikov_SAR,32,32,0,,,,,,,,,,,192.0,0.0,0.0,0.0,33.0
+development_nuts,ICC,32,32,64,1.00667,1037.66,1636.04,0.7299907853138617,0.0,0.0,0.0,0.0,0.0,0.0,,,,,
+development_nuts,ICC_poverty,32,32,64,1.00864,611.833,1437.85,0.5983437195074002,0.0,0.0,0.0,0.0,0.0,0.0,,,,,
+development_nuts,ICC_SAR_w25,32,32,0,,,,,,,,,,,,,,,
+development_nuts,ICC_SAR_w50,32,32,0,,,,,,,,,,,,,,,
+development_nuts,ICC_SAR_w75,32,32,0,,,,,,,,,,,,,,,
+sparse57,Sikov_FH,256,256,0,,,,,,,,,,,1536.0,0.0,0.0,0.0,0.0
+sparse57,Sikov_SAR,256,256,0,,,,,,,,,,,1536.0,6.0,0.0,0.0,222.0
+sparse57,Sikov_SAR_Published,256,256,0,,,,,,,,,,,1536.0,7.0,0.0,0.0,975.0
+sparse57,ICC,256,256,512,1.00872,877.183,1022.56,0.6437011460597124,0.0,0.0,0.0,0.0,0.0,0.0,,,,,
+sparse57,Selected,256,256,0,,,,,,,,,,,,,,,

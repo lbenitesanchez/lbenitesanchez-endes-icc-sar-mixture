@@ -1,17 +1,17 @@
-# External inputs for the simplified workflow
+# Included inputs for the simplified workflow
 
-`--data-root` identifies an external input folder containing the frozen derived data and reference CSV files. Their exact relative paths and SHA-256 hashes are registered in [input_hashes.json](input_hashes.json); their contents are not distributed on GitHub.
+The complete **35-file reproduction bundle is included in [inputs/](inputs/)**: 20 derived-data CSVs and 15 numerical reference tables. Its exact relative paths and SHA-256 hashes remain registered in [input_hashes.json](input_hashes.json). The files are copied without changing values or bytes.
 
 ## Obtaining the input bundle
 
-Cloning this repository and installing Python packages does not create the required inputs. **All 35 registered CSVs are required for every simplified entry point**, including a single table or figure. There is no public download of this bundle in this repository.
+Clone or download this repository. The English entry points automatically use `simplified/inputs/`, so no separate download, data request or input-path configuration is required. The older `external_inputs_sha256` JSON key is retained for compatibility; the files it identifies are now bundled.
 
-For access enquiries, contact the corresponding author, Luis Benites, at [le.benitess@up.edu.pe](mailto:le.benitess@up.edu.pe), and identify the repository revision and `simplified/input_hashes.json` contract. Availability and any access conditions must be confirmed with the authors. The required subset consists of the `datos/` and `referencias/` files listed in that contract; the article, supplement, cover letter, raw survey records and saved model fits are not needed for this simplified route.
+**The principal ENDES survey microdata are not included.** These CSVs contain derived simulation metrics, computational diagnostics, aggregate comparisons, model-based district estimates, district-capital coordinates and numerical reference tables. They allow regeneration of the 20 supported outputs, rather than re-estimation of NUTS, REML or bootstrap models. Read the [data dictionary, privacy review and INEI attribution](inputs/README.md).
 
-The verified local simplified package can be used as the input folder. Keep that package outside the checkout. Its historical directory names are part of the input contract, so retain them when providing the files:
+The original folder names are retained so the frozen analysis paths and hashes still match:
 
 ```text
-EXTERNAL_INPUTS/
+simplified/inputs/
   datos/
     desarrollo/
     diagnosticos/
@@ -24,30 +24,42 @@ EXTERNAL_INPUTS/
     Suplemento/
 ```
 
-The contract contains **20 derived-data CSVs and 15 reference-table CSVs**. Derived inputs include simulated-population metrics, corrected aggregates, diagnostics, district predictions, map coordinates and observation masks. Reference tables are the final exported tables and are used only to verify outputs after computation.
-
-`sources_sha256` verifies **18 source files already present in this repository**. Additional copies of those sources are not required beside the inputs. The hashes bind the interface to its recorded numerical revision; they prevent silently substituting aggregates from another run. A new full re-estimation must retain its own provenance and pass the validation chain described in [REPRODUCING.md](../REPRODUCING.md).
+All 35 CSVs are checked for every entry point, even when generating one result. Reference tables are used only after computation to verify the generated table; they are not copied to create the output. `sources_sha256` also verifies 18 original source files already present in this repository.
 
 ## Verify without generating outputs
 
 From the repository root:
 
 ```sh
-python simplified/verify_inputs.py --data-root /external/path/simplified_inputs
+unset IAOS_SIMPLE_DATA_ROOT
+python simplified/verify_inputs.py
 ```
+
+`unset` clears an input override from an earlier session. The default verifier checks the included bundle and reports `input_location: bundled`.
 
 ## Regenerate all 20 supported outputs
 
 ```sh
-python simplified/run_all.py \
-  --data-root /external/path/simplified_inputs \
-  --output-root /external/path/simplified_outputs
+python simplified/run_all.py --output-root "../endes-mixture-outputs"
 ```
 
-Replace the example paths with your own folders. The output folder must be outside the checkout, separate from the input folder, and either new or managed by this workflow. The program checks the inputs before creating outputs.
+The output folder must be outside the checkout and either new, empty or already managed by this workflow. No generated images or new result files are written into the repository.
 
-Source-data preparation, model fitting and validation require the additional external files specified in [reproduction/DATA_INPUTS.md](../reproduction/DATA_INPUTS.md). The simplified workflow covers regeneration from certified derived inputs; it does not replace the full estimation pipeline.
+## Optional external input copy
+
+An existing verified local package or a separate copy of these 35 CSVs can still serve as the input root:
+
+```sh
+python simplified/verify_inputs.py --data-root "/external/path/simplified_inputs"
+python simplified/run_all.py \
+  --data-root "/external/path/simplified_inputs" \
+  --output-root "/external/path/simplified_outputs"
+```
+
+An external root must directly contain `datos/` and `referencias/`, be outside the checkout, and not overlap the output folder. `IAOS_SIMPLE_DATA_ROOT` is an alternative override. The only accepted input root inside the checkout is the registered `simplified/inputs/` directory.
 
 ## Missing files or a hash mismatch
 
-Point `--data-root` to the folder directly containing `datos/` and `referencias/`, retain the exact historical filenames, and supply the complete 35-file bundle. A hash mismatch means the file does not match the recorded revision; obtain the matching bundle before continuing. A new full re-estimation needs a separately registered provenance chain and may produce different values; its outputs are not interchangeable with this frozen input contract.
+Restore the matching files from this repository revision. Preserve the historical filenames and the complete 35-file bundle. A hash mismatch means the file does not match the recorded numerical revision. New full model fits require their own source, executable and input provenance and may produce different results; their outputs are not interchangeable with this frozen input contract.
+
+Full source-data preparation and model fitting still require the external files specified in [reproduction/DATA_INPUTS.md](../reproduction/DATA_INPUTS.md). The included CSVs do not replace those original data or fitting reference trees.

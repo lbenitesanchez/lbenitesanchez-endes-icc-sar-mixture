@@ -4,7 +4,7 @@ Code for estimating district childhood anaemia and stunting in Peru with a fixed
 
 **Start with the [English table-and-figure guide](simplified/README.md).** It provides one entry point for each supported result and reuses the original statistical modules.
 
-The simplified interface covers **20 outputs: article Tables 1–5 and Figures 1–3; supplement Tables S1–S9 and S23, and Figures S1–S2**. It regenerates these outputs from corrected derived inputs. **A fresh clone alone cannot generate the results:** the 35 required external CSVs are excluded from GitHub. See [input access and preparation](simplified/INPUTS.md#obtaining-the-input-bundle). Historical supplement Tables S10–S22 and Figures S3–S6 use the [original workflow](REPRODUCING.md#historical-supplement-results).
+The simplified interface covers **20 outputs: article Tables 1–5 and Figures 1–3; supplement Tables S1–S9 and S23, and Figures S1–S2**. All **35 reviewed reproduction CSVs are included** in [simplified/inputs/](simplified/inputs/), so a fresh clone plus the Python environment can regenerate these outputs. These are derived research inputs and numerical references; **the principal ENDES survey microdata are not included**. Historical supplement Tables S10–S22 and Figures S3–S6 use the [original workflow](REPRODUCING.md#historical-supplement-results).
 
 ## Contents
 
@@ -13,7 +13,7 @@ The simplified interface covers **20 outputs: article Tables 1–5 and Figures 1
 | Regenerate a particular table or figure | [Table-and-figure guide](simplified/README.md#tables-and-figures) |
 | Regenerate all 20 supported outputs | [Execution instructions](simplified/README.md#run-one-result-a-group-or-all-20) |
 | Understand the proposed mixture | [Fixed 75/25 mixture interface](simplified/model/mixture_75_25.py) and the original [`mixture_prediction`](src/estudio_publicacion/sikov_2026-10-10/scripts/improve_candidates.py) |
-| Prepare the external derived inputs | [Simplified input contract](simplified/INPUTS.md) |
+| Understand the included data and their sources | [Input description and attribution](simplified/inputs/README.md) and [input contract](simplified/INPUTS.md) |
 | Re-estimate the complete analysis from source data | [Full reproduction instructions](REPRODUCING.md) and [data requirements](reproduction/DATA_INPUTS.md) |
 | Cite the code | [CITATION.cff](CITATION.cff) |
 
@@ -34,15 +34,15 @@ python tools/check_code_release.py
 
 If you already cloned the repository, start with `cd` into your checkout. Run all subsequent commands from that repository root with the environment activated.
 
-The simplified workflow requires an external input folder containing the registered derived CSVs and reference tables. Their contents are not distributed in this repository. See [INPUTS.md](simplified/INPUTS.md) before running the analysis.
+The workflow uses the included `simplified/inputs/` bundle by default. Choose an output folder outside the repository:
 
 ```sh
-export IAOS_SIMPLE_DATA_ROOT="/external/path/simplified_inputs"
-export IAOS_SIMPLE_OUTPUT_ROOT="/external/path/simplified_outputs"
+unset IAOS_SIMPLE_DATA_ROOT
+export IAOS_SIMPLE_OUTPUT_ROOT="$PWD/../endes-mixture-outputs"
 python simplified/verify_inputs.py
 ```
 
-Replace both paths with your own folders. Keep the input and output folders separate and outside the checkout. You can also supply `--data-root` and `--output-root` directly. Use `--help` to inspect an entry point without providing data.
+`unset` clears an input override from earlier instructions; no data path is needed for a fresh clone. You can choose another external output folder. An optional `--data-root` or `IAOS_SIMPLE_DATA_ROOT` can select a separate, hash-identical external input bundle. Use `--help` to inspect an entry point.
 
 After verification, choose the result you need. For **Figure 1** and **Table 3**, run:
 
@@ -96,7 +96,9 @@ The primary cohort contains 256 populations; the development cohort contains 32.
 
 ## Publication scope and provenance
 
-This repository distributes source code, dependency specifications, scientific protocols, checksums and instructions. The article, supplementary document, cover letter, title page, survey records, stored result tables, figures, fits and chains are excluded.
+This repository distributes source code, dependency specifications, protocols, instructions and **35 reviewed CSVs: 20 derived-data files and 15 numerical reference tables**. The [data review and exact file inventory](provenance/public_inputs.json) records their hashes, schemas and provenance. The article, supplementary document, cover letter, title page, principal survey microdata, generated images, native fits and chains remain excluded.
+
+The district files contain model-based research estimates, district availability flags and public district-capital coordinates. They contain no individual or household survey records. Sources are attributed to INEI in the [data description](simplified/inputs/README.md); the research estimates are not official INEI district statistics. Earlier code-only provenance receipts describe prior releases and remain historical records.
 
 The original statistical formulas, seeds, likelihoods, parameter bounds, graphs, bootstrap sizes, mixture weights and multiplicity rules are preserved. Portable routing and numerical formatting adaptations are recorded under [provenance/](provenance/). Source checks accept only documented identities and adaptations.
 
