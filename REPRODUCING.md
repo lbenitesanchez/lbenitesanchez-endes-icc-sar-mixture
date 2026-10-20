@@ -1,5 +1,7 @@
 # Reproducing the scientific analysis
 
+For the principal-data publication decision, safe district auxiliaries, official survey access and practical fitting commands, read [reproduction/PRINCIPAL_DATA.md](reproduction/PRINCIPAL_DATA.md). The raw/linked survey records and disclosive district fitting basis remain private. A full model run still needs the external scientific reference prerequisites listed in that guide.
+
 For the current English table-and-figure workflow, start with [simplified/README.md](simplified/README.md). Use `simplified/verify_inputs.py` followed by `simplified/run_all.py --output-root ../endes-mixture-outputs`. The 35 reviewed CSVs in `simplified/inputs/` are selected by default. This regenerates artifacts from certified derived inputs; it does not fit models. The instructions below cover the complete source-data preparation, model-fitting, correction and scoring pipeline.
 
 Run from the repository root. All survey records, auxiliary files, native fits, sampler state and generated output must be outside this checkout. The published protocols describe the archived analysis; a new run must retain its own source, executable and input hashes rather than pretending to be the archived execution.
@@ -54,7 +56,7 @@ Run final `audit_corrected_scores_v3.py` against the completed private predictio
 
 ## 4 Code-only compatibility
 
-The model/scoring mathematics and retained table functions are unchanged. Paths, private-reference routing, editorial omissions and numerical-only formatting extraction are explicit adaptations in `provenance/code_only_sources.json` and the associated parity receipts. Unknown source changes are rejected. The repository includes only the 35 reviewed reproduction CSVs described in [simplified/INPUTS.md](simplified/INPUTS.md), in addition to the sources and metadata. It contains no manuscript, supplement document, cover letter, raw survey records or chains.
+The model/scoring mathematics and retained table functions are unchanged. Paths, private-reference routing, editorial omissions and numerical-only formatting extraction are explicit adaptations in `provenance/code_only_sources.json` and the associated parity receipts. Unknown source changes are rejected. The repository includes the 35 reviewed reproduction CSVs described in [simplified/INPUTS.md](simplified/INPUTS.md) and two [reviewed district auxiliary CSVs](reproduction/inputs/README.md), in addition to the sources and metadata. It contains no manuscript, supplement document, cover letter, raw survey records or chains.
 
 ## Historical supplement results
 

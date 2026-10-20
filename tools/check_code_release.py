@@ -13,6 +13,10 @@ PERSONAL = re.compile(r'/(?:Users|home|Volumes)/[A-Za-z0-9_-]{2,}(?:/|$)')
 SECRET = re.compile(r'(?:ghp_|github_pat_|sk-proj-|xoxb-|xoxp-)[A-Za-z0-9_-]{20,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
 PAPER = ['Dear' + ' Editor', 'We present for' + ' author review', 'District health statistics require' + ' useful uncertainty']
 SKIP = {'.git', '__pycache__', '.venv', 'venv', '.pytest_cache'}
+AUXILIARY_CSV_SHA256 = {
+    'reproduction/inputs/aux_all_districts.csv': '7d3d28778a5781dff364617c14f0cf0892022c8fb80ee0b33a83270d3e2fc511',
+    'reproduction/inputs/aux_sikov14_official.csv': '4b983d90a9a3480dbf80f6ed165f90ac4e69d6dad9694b4d17f2456068c4a869',
+}
 
 
 def files():
@@ -20,7 +24,7 @@ def files():
 
 
 def approved_csvs():
-    """Only the 35 frozen, reviewed input identities may be distributed as CSV."""
+    """Allow the 35 frozen output inputs and the two reviewed district auxiliaries."""
     contract = json.loads((ROOT / 'simplified/input_hashes.json').read_text())
     registered = contract['external_inputs_sha256']
     if not isinstance(registered, dict) or len(registered) != 35:
@@ -33,6 +37,11 @@ def approved_csvs():
                 or not isinstance(digest, str) or not re.fullmatch('[0-9a-f]{64}', digest)):
             raise ValueError('Invalid registered CSV identity: ' + relative)
         approved['simplified/inputs/' + relative] = digest
+    auxiliary_review = json.loads((ROOT / 'provenance/principal_data_review.json').read_text())
+    auxiliary = auxiliary_review['approved_auxiliary_files']
+    if not isinstance(auxiliary, dict) or auxiliary != AUXILIARY_CSV_SHA256:
+        raise ValueError('Approved auxiliary CSV identities differ from the reviewed two-file contract')
+    approved.update(auxiliary)
     return approved
 
 
@@ -43,7 +52,7 @@ def main():
         approved = approved_csvs()
     except (KeyError, TypeError, ValueError, OSError) as error:
         approved = {}
-        problems.append(('simplified/input_hashes.json', str(error)))
+        problems.append(('CSV allowlist contracts', str(error)))
     for path in ROOT.rglob('*'):
         relative = path.relative_to(ROOT)
         if path.is_symlink() and not any(part in SKIP for part in relative.parts):
@@ -80,6 +89,7 @@ def main():
         print(json.dumps({'status': 'FAIL', 'findings': problems}, indent=2)); raise SystemExit(1)
     print(json.dumps({'status': 'PASS_PUBLIC_REPRODUCTION_RELEASE', 'files': len(all_files),
                       'indexed_files': len(expected), 'approved_derived_csv_files': len(approved),
+                      'approved_simplified_csv_files': 35, 'approved_model_auxiliary_csv_files': 2,
                       'private_microdata_or_submission_documents_included': False,
                       'model_fits_run_by_this_check': False}))
 

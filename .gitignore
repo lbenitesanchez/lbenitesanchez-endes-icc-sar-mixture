@@ -83,3 +83,7 @@ private*/
 !/simplified/inputs/referencias/Suplemento/Tabla_S7.csv
 !/simplified/inputs/referencias/Suplemento/Tabla_S8.csv
 !/simplified/inputs/referencias/Suplemento/Tabla_S9.csv
+
+# Reviewed model covariates; principal survey data remain private.
+!/reproduction/inputs/aux_all_districts.csv
+!/reproduction/inputs/aux_sikov14_official.csv

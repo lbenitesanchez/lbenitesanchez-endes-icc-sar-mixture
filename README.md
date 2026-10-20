@@ -14,7 +14,7 @@ The simplified interface covers **20 outputs: article Tables 1–5 and Figures 1
 | Regenerate all 20 supported outputs | [Execution instructions](simplified/README.md#run-one-result-a-group-or-all-20) |
 | Understand the proposed mixture | [Fixed 75/25 mixture interface](simplified/model/mixture_75_25.py) and the original [`mixture_prediction`](src/estudio_publicacion/sikov_2026-10-10/scripts/improve_candidates.py) |
 | Understand the included data and their sources | [Input description and attribution](simplified/inputs/README.md) and [input contract](simplified/INPUTS.md) |
-| Re-estimate the complete analysis from source data | [Full reproduction instructions](REPRODUCING.md) and [data requirements](reproduction/DATA_INPUTS.md) |
+| Understand principal-data access and fit models from original inputs | [Principal-data review and fitting guide](reproduction/PRINCIPAL_DATA.md), [full pipeline](REPRODUCING.md) and [data requirements](reproduction/DATA_INPUTS.md) |
 | Cite the code | [CITATION.cff](CITATION.cff) |
 
 ## Quick start
@@ -96,9 +96,9 @@ The primary cohort contains 256 populations; the development cohort contains 32.
 
 ## Publication scope and provenance
 
-This repository distributes source code, dependency specifications, protocols, instructions and **35 reviewed CSVs: 20 derived-data files and 15 numerical reference tables**. The [data review and exact file inventory](provenance/public_inputs.json) records their hashes, schemas and provenance. The article, supplementary document, cover letter, title page, principal survey microdata, generated images, native fits and chains remain excluded.
+This repository distributes source code, dependency specifications, protocols, instructions and **37 reviewed CSVs: 35 simplified-workflow inputs/reference tables and 2 district auxiliary matrices**. The [35-file reproduction inventory](provenance/public_inputs.json) and [principal-data review with the two auxiliary matrices](provenance/principal_data_review.json) record their hashes, schemas and provenance. The article, supplementary document, cover letter, title page, principal survey microdata, generated images, native fits and chains remain excluded.
 
-The district files contain model-based research estimates, district availability flags and public district-capital coordinates. They contain no individual or household survey records. Sources are attributed to INEI in the [data description](simplified/inputs/README.md); the research estimates are not official INEI district statistics. Earlier code-only provenance receipts describe prior releases and remain historical records.
+The district reproduction files contain model-based research estimates, district availability flags and public district-capital coordinates. The two additional [fitting auxiliaries](reproduction/inputs/README.md) contain aggregate district covariates. The principal-data review found individual health records and disclosive small cells in the original fitting data; those files remain excluded. See the [access routes, commands and remaining full-fit prerequisites](reproduction/PRINCIPAL_DATA.md). The published CSVs contain no individual or household survey records. Sources are attributed to INEI in the [data description](simplified/inputs/README.md); the research estimates are not official INEI district statistics. Earlier code-only provenance receipts describe prior releases and remain historical records.
 
 The original statistical formulas, seeds, likelihoods, parameter bounds, graphs, bootstrap sizes, mixture weights and multiplicity rules are preserved. Portable routing and numerical formatting adaptations are recorded under [provenance/](provenance/). Source checks accept only documented identities and adaptations.
 

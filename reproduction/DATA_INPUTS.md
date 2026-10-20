@@ -1,6 +1,6 @@
 # External input requirements
 
-The simplified workflow includes 35 reviewed derived CSVs and numerical reference tables under [simplified/inputs/](../simplified/inputs/). They are sufficient to regenerate its 20 supported outputs. **The principal ENDES survey microdata and complete model-fitting inputs are not included.** The full workflow below still requires external survey rows, auxiliary arrays, fitted states and reference trees. Keep these original inputs and all generated output outside the checkout and pass explicit paths to the preparation and fitting CLIs.
+The simplified workflow includes 35 reviewed derived CSVs and numerical reference tables under [simplified/inputs/](../simplified/inputs/). They are sufficient to regenerate its 20 supported outputs. Two additional [district auxiliary CSVs](inputs/README.md) are now included. **The principal ENDES survey microdata and complete model-fitting inputs are not included.** Read the [principal-data review and model-fitting guide](PRINCIPAL_DATA.md) for the privacy decision, official acquisition routes, exact commands and remaining reference prerequisites. The full workflow below still requires external survey rows, auxiliary arrays, fitted states and reference trees. Keep these original inputs and all generated output outside the checkout and pass explicit paths to the preparation and fitting CLIs.
 
 ## Official survey acquisition records
 
@@ -17,7 +17,7 @@ Only file/schema/checksum metadata is supplied in `expected/private_csv_checksum
 
 ## Auxiliary and reference trees
 
-Actual-data preparation additionally needs the recorded district census predictors, geography and locked real-data basis. The author auxiliary route takes explicit `--author-aux-root` or `ENDES_AUX_ROOT` and the workbooks `consolidado_nuevo_completo_con_directos.xlsx` and `consolidado_censo_ubigeo_actualizado.xlsx`. The portable route accepts an external, checksum-verified district auxiliary CSV; that CSV is not bundled here and is not a new independent census extraction.
+Actual-data preparation additionally needs the recorded district census predictors, geography and locked real-data basis. The author auxiliary route takes explicit `--author-aux-root` or `ENDES_AUX_ROOT` and the workbooks `consolidado_nuevo_completo_con_directos.xlsx` and `consolidado_censo_ubigeo_actualizado.xlsx`. The portable route accepts the checksum-verified `reproduction/inputs/aux_all_districts.csv` bundled here via `--public-aux-csv`. It retains its author-supplied compilation and unverified-extraction provenance flags; it is not a new independent census extraction. The second bundled auxiliary is `reproduction/inputs/aux_sikov14_official.csv`. These covariates do not replace original survey outcomes, direct-estimate inputs or the complete archived census query/reference tree.
 
 Simulation generation requires the original synthetic auxiliary template and scientific reference freezes. The correction stage requires the recorded original input/prediction/status trees. These are external prerequisites, not files created by installing Python dependencies. Historical freeze records that contain private filesystem locations remain in the private reference tree, read via `--reference-root`; they are not published.
 

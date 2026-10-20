@@ -1,16 +1,16 @@
 {
   "format": "endes-code-only-release-files-v1",
-  "created_utc": "2026-10-20T00:09:32.589307+00:00",
+  "created_utc": "2026-10-20T01:33:35.765754+00:00",
   "excluded_from_self_index": [
     "provenance/release_files.json",
     "provenance/publication_audit.json"
   ],
   "files_sha256": {
     ".gitattributes": "ba3af655a67e5fcaaa5d9eaa1c3c8794ffe02355421c2222278c641c81e491ae",
-    ".gitignore": "e90d05379d87597b04adc89b3bf430142a60332ff0da1188ca5dd0c02fc53b3b",
+    ".gitignore": "0348bb9fe97b3790440b16364c1d06c16e6e1941068005565f17dfa9ce0c3e71",
     "CITATION.cff": "dfc54d0756a84abd449ce93d3ab9c88051829970706ea40ffee65ea20e98d0b2",
-    "README.md": "d23c371fdef966ed7065d62f09b8d23ed93b3a873cd0884a3302cd06d464e102",
-    "REPRODUCING.md": "0faad254d45b7970ecd3715aff373ad5eb4a664ff49b1f926f59f310cfcdb8bd",
+    "README.md": "23b4a2ad3df85b38fd549d9367200913ed374a78851579ffe187c38fb78421b0",
+    "REPRODUCING.md": "704b4692570c37b7ec659c84193291c03af229bcfc5e86030d9ff20e43964b08",
     "expected/private_csv_checksums.json": "5817e79f82897e854e52837ff54b787fdf5fb8581190d2b2b17e942c2af388b5",
     "expected/raw_2025_checksums.json": "60b385c8d8a02820c096f9ed745f9b22103869c78ffe83fafba60223e2f67b9b",
     "provenance/code_only_contract.json": "72c40ae36672495e02c63ea4c92fd66475ba2b462fc8a1715db9852614672bed",
@@ -18,11 +18,14 @@
     "provenance/code_only_sources.json": "74a19c6b4fb4a72e42aa74d65e4366927f6206754d98e69fa25d30dbce0d1467",
     "provenance/english_interface.json": "afb667f5b44bf482de61b79429657a853321f9996132f323d5212c2940f09c7e",
     "provenance/portability_changes.json": "d8887db186cd5b139689d15da30851e385dc6ed1c36acf035fb31986fbc679e2",
+    "provenance/principal_data_review.json": "6549d1deea3f0825317f1b5094b4e9dab7cdc7fe65d798f805e8ffc5a71a1884",
     "provenance/public_inputs.json": "23d3d6dab9de4ac1ccef8270476ee329e59dca2c083bf309ad2a5ff7189f39ea",
     "provenance/simplified_interface.json": "96459f362af2de1478d7d16523ca55d41839f42b7777979df5b644a3c537b61b",
-    "reproduction/DATA_INPUTS.md": "6802c2de9182ed86c759c5ad81b51d760ee2bd4784595a5051021ab320a6f77f",
+    "reproduction/DATA_INPUTS.md": "8630cfad5618641e2241deea2ac43d09405caf8df91dda51200440c63510fee2",
+    "reproduction/PRINCIPAL_DATA.md": "a469d5b77cc9f03ae3b9d88f1b1fd45ab0aaa2435a3114f4816e8401407f7582",
     "reproduction/article_coverage.py": "a1b978d287569bb9e7a8a5ad46062726c30a4567fc506b72255ff32dae69c13c",
     "reproduction/capture_private_stan_state.py": "98faec5d24522ee5eb7d33b4574b7906562d7d15af1505a65326c16ef767df29",
+    "reproduction/check_principal_inputs.py": "b654e30ac5171abc1df0be058253f232450e50d7eabfa54726bb58eaa0bd1d05",
     "reproduction/code_only_sources.py": "6b6da3117300e3e5e26022e2c0eb595b85da383caa5b47d6e0d1fe072f78a034",
     "reproduction/compile_runtime.py": "f38c00332b93e3c8b15175a81c727c63da8a5bfc0228b2946e57c28527980596",
     "reproduction/current_protocol_metadata_v2.py": "476a77fb3d1948ef25e19a1f2fbbb18725f11c9d4ea7a66ef2afdaf6a5ca077c",
@@ -32,6 +35,9 @@
     "reproduction/export_public_fresh_legacy_v2.py": "8e59a9708fd2abe8779716e7d80a4e5572abf105e37ddc6f8d7e6581f40ce778",
     "reproduction/export_public_fresh_results.py": "7f47690a56fa732cd3d60279a688ce57cd907c42d0309cb692b39f63ea50d2db",
     "reproduction/input_claim_audit.py": "23189aac96e4f3a1fef0eda66fb79d63c55cbbc11272e591f4bf21f31adf5e48",
+    "reproduction/inputs/README.md": "54b39a9cb981d5ae45872d2255ed6c0ca6175ab11665b0ec5c6a244343e39e9c",
+    "reproduction/inputs/aux_all_districts.csv": "7d3d28778a5781dff364617c14f0cf0892022c8fb80ee0b33a83270d3e2fc511",
+    "reproduction/inputs/aux_sikov14_official.csv": "4b983d90a9a3480dbf80f6ed165f90ac4e69d6dad9694b4d17f2456068c4a869",
     "reproduction/legacy_accelerate_gao.py": "05b853013a3a8b28ea06a3c23e60a9d516958212b0977d5c43a75b763b1b3452",
     "reproduction/legacy_compare.py": "de6723a169447386529695d1d44c07664ff30237a1c6592c4ea1d9f556031be9",
     "reproduction/legacy_execution_summary.py": "8fc3777babb4c1da5524cd54121cce9b99af8f75cdf53d1e062492c89dfadfb4",
@@ -482,8 +488,8 @@
     "src/estudio_publicacion/sikov_2026-10-10/simulation_design_plan.json": "4fc6cfb9401c3fb18304608f90b46116dc617b89d21c327862a98a101e146116",
     "src/estudio_publicacion/sikov_2026-10-10/validacion/sensitivity_sampled_graph_freeze.json": "0435d8b2167ffe1c275310027c6b5c81f2c462b8deca856eec7210bb57ff057e",
     "src/estudio_publicacion/sikov_2026-10-10/validacion/sikov_reconstruction_specification.json": "e81fd2966ddf65196c42a61ee5955335a09935475960ef28bdfb5fcc3576de90",
-    "tools/check_code_release.py": "9b002663dbec9b8693282ee80514f516dc74d430f2d06b005e3a4758c94935cf",
+    "tools/check_code_release.py": "4747ac02808834e6592ac21f7883f8f482dfb03d44a89585a860dfd13914e84f",
     "tools/test_code_only_source_gate.py": "4929d452fa08eec4651005f1ab46bda4e68628ff7609d20c38cef1a888954070",
-    "tools/test_public_input_gate.py": "f3c7e752353b06afbb3153976a625d9a072636ae08f5b1bf9e72aa26e229835a"
+    "tools/test_public_input_gate.py": "8f6677ae045651a9570b0260ad60eb6c29723a9fd5483a60d5de8739d6181259"
   }
 }

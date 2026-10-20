@@ -44,7 +44,9 @@ def main():
                                     cwd=fixture, env=env, capture_output=True, text=True)
             receipt = json.loads(result.stdout)
             if finding is None:
-                assert result.returncode == 0 and receipt['approved_derived_csv_files'] == 35, receipt
+                assert result.returncode == 0 and receipt['approved_derived_csv_files'] == 37, receipt
+                assert receipt['approved_simplified_csv_files'] == 35, receipt
+                assert receipt['approved_model_auxiliary_csv_files'] == 2, receipt
             else:
                 assert result.returncode != 0, label
                 assert any(finding in row[1] for row in receipt['findings']), receipt
@@ -63,6 +65,26 @@ def main():
         registered.unlink()
         gate('missing registered CSV rejected', 'missing approved CSV')
         registered.write_bytes(original)
+
+        auxiliary = fixture / 'reproduction/inputs/aux_sikov14_official.csv'
+        original_auxiliary = auxiliary.read_bytes()
+        auxiliary.write_bytes(original_auxiliary + b'\n')
+        gate('changed auxiliary CSV rejected even when inventoried', 'approved CSV hash differs')
+        auxiliary.unlink()
+        gate('missing auxiliary CSV rejected', 'missing approved CSV')
+        auxiliary.write_bytes(original_auxiliary)
+
+        review = fixture / 'provenance/principal_data_review.json'
+        original_review = review.read_bytes()
+        auxiliary_review = json.loads(original_review)
+        auxiliary_review['approved_auxiliary_files']['reproduction/inputs/aux_sikov14_official.csv'] = '0' * 64
+        review.write_text(json.dumps(auxiliary_review, indent=2) + '\n')
+        gate('altered auxiliary allowlist hash rejected', 'reviewed two-file contract')
+        auxiliary_review = json.loads(original_review)
+        auxiliary_review['approved_auxiliary_files']['reproduction/inputs/unregistered.csv'] = '0' * 64
+        review.write_text(json.dumps(auxiliary_review, indent=2) + '\n')
+        gate('extra auxiliary allowlist path rejected', 'reviewed two-file contract')
+        review.write_bytes(original_review)
 
         linked = fixture / 'linked_inputs'
         linked.symlink_to(fixture / 'simplified/inputs', target_is_directory=True)
